@@ -63,27 +63,91 @@ variable 13 file={filename}.I.map filetype=ascii skip=6
 variable 14 file={filename}.e.map filetype=ascii skip=6
 variable 15 file={filename}.d.map filetype=ascii skip=6
 """)
+        
+class GridMapInformation:
+    """
+    A class to represent grid map information for a target ligand.
+    """
+
+    def __init__(self, target_gridmap_coords, target_atomtype, target_charge,
+                 target_coords, target_ligand, target_center, target_size,
+                 grid_center, spacing, npts):
+        """
+        Initialize the GridMapInformation object with the given parameters.
+        """
+        self.target_gridmap_coords = target_gridmap_coords
+        self.target_charge = target_charge
+        self.target_atomtype = target_atomtype
+        self.target_coords = target_coords
+        self.target_ligand = target_ligand
+        self.target_center = target_center
+        self.target_size = target_size
+        self.grid_center = grid_center
+        self.spacing = spacing
+        self.npts = npts
+
+    @classmethod
+    def from_gridmap(cls, gridfile, pdbqt):
+        """
+        Create a GridMapInformation object from the given grid file and pdbqt file.
+        """
+        grid_center, spacing, npts = cls._parse_gridfile(gridfile)
+        target_gridmap_coords = cls._generate_target_gridmap_coords(grid_center, spacing, npts)
+        (target_ligand, target_charge, target_coords,
+         target_atomtype, target_center, target_size) = cls._parse_pdbqt(pdbqt)
+
+        return cls(target_gridmap_coords, target_atomtype, target_charge,
+                   target_coords, target_ligand, target_center, target_size,
+                   grid_center, spacing, npts)
+
+    @staticmethod
+    def _parse_gridfile(gridfile):
+        with open(gridfile) as tempfile:
+            for line in tempfile:
+                if 'center' in line:
+                    grid_center = [float(x) for x in ' '.join(line.split()).split(' ')[1:4]]
+                elif 'spacing' in line:
+                    spacing = float(' '.join(line.split()).split(' ')[1])
+                elif 'npts' in line:
+                    npts = [int(x) for x in ' '.join(line.split()).split(' ')[1:4]]
+        return grid_center, spacing, npts
+
+    @staticmethod
+    def _generate_target_gridmap_coords(grid_center, spacing, npts):
+        xmin = grid_center[0] - (npts[0] / 2) * spacing
+        xcoord = [round(xmin + i * spacing, 4) for i in range(0, npts[0] + 1)]
+        ymin = grid_center[1] - (npts[1] / 2) * spacing
+        ycoord = [round(ymin + i * spacing, 4) for i in range(0, npts[1] + 1)]
+        zmin = grid_center[2] - (npts[2] / 2) * spacing
+        zcoord = [round(zmin + i * spacing, 4) for i in range(0, npts[2] + 1)]
+
+        target_gridmap_coords = [[xcoord[k], ycoord[j], zcoord[i]]
+                                 for i in range(0, npts[2] + 1) for j in range(0, npts[1] + 1) for k in range(0, npts[0] + 1)]
+        return target_gridmap_coords
+
+    @staticmethod
+    def _parse_pdbqt(pdbqt):
+        with open(pdbqt) as tempfile:
+            target_ligand = [' '.join(line.split()).split(' ') for line in tempfile]
+            target_charge = [float(x[-2]) for x in target_ligand]
+            target_coords = np.array([[float(y) for y in x[-7:-4:1]] for x in target_ligand])
+            target_atomtype = list(set([z[-1] for z in target_ligand]))
+
+            x_coords, y_coords, z_coords = target_coords.T
+
+            target_center = [round(sum(x_coords) / len(x_coords), 5),
+                             round(sum(y_coords) / len(y_coords), 5),
+                             round(sum(z_coords) / len(z_coords), 5)]
+
+            max_ext = np.array([max(x_coords), max(y_coords), max(z_coords)])
+            min_ext = np.array([min(x_coords), min(y_coords), min(z_coords)])
+            target_size = (max_ext - min_ext).round(5)
+
+        return target_ligand, target_charge, target_coords, target_atomtype, target_center, target_size
 
 def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoord, filename, at):
-    import numpy
-    # halogens = ["F", "Cl", "Br", "I"]
-    # aromatic_atoms = ["A", "NA", "OA", "SA"]
-    # if at in halogens:
-    #     compensation = set(halogens)-set(at)
-    # elif at in aromatic_atoms:
-    #     compensation = set(aromatic_atoms)-set(at)
-    # else:
-    #     compensation = [None]
-    # extract data of an atom type
-    # extract the coordiante and convert from string to float
-    at_pdbqt = []
-    # compensation_pdbqt = []
 
-    for i in range(0, len(ligand)):
-        if ligand[i][-1] == at:
-            at_pdbqt.append(ligandcoord[i])
-        # elif ligand[i][-1] in compensation:
-        #     compensation_pdbqt.append(ligandcoord[i])
+    at_pdbqt = [coord for i, coord in enumerate(ligandcoord) if ligand[i][-1] == at]
 
     # generate map file of carbon
     with open(f"{folder}{filename}.{at}.map", "w") as gridmap:
@@ -98,36 +162,14 @@ def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoo
 
         # if the carbon atom is within 5 angstrom of a grid point
         # energy will be counted into that grid point based on the distance
-        for i in range(0, len(gridcoord)):
+        for grid in gridcoord:
             energy = 0
-            dist_lis = []
-            for k in range(0, len(at_pdbqt)):
-            #     if (gridcoord[i][0] - 1.54) <= at_pdbqt[k][0] <= (gridcoord[i][0] + 1.54)\
-            #         and (gridcoord[i][1] - 1.54) <= at_pdbqt[k][1] <= (gridcoord[i][1] + 1.54)\
-            #             and (gridcoord[i][2] - 1.54) <= at_pdbqt[k][2] <= (gridcoord[i][2] + 1.54):
-                if (gridcoord[i][0]-at_pdbqt[k][0])**2+ \
-                    (gridcoord[i][1]-at_pdbqt[k][1])**2+ \
-                    (gridcoord[i][2]-at_pdbqt[k][2])**2 <= (1*1.54)**2:
+            dist_lis = [np.linalg.norm(np.array(grid) - np.array(at_coord)) for at_coord in at_pdbqt if np.linalg.norm(np.array(grid) - np.array(at_coord)) <= 1 * 1.54]
 
-                    dist = np.linalg.norm(np.array(gridcoord[i]) - np.array(at_pdbqt[k]))
-                    # energy = 0.3125*(energy - 10) / (dist**0.5)
-                    
-                    dist_lis.append(dist)
-
-            if len(dist_lis) != 0:
-                dist_lis = np.array(dist_lis)
-                sorted_ind = np.argsort(dist_lis)
-                sorted_dist = dist_lis[sorted_ind[::-1]]
+            if dist_lis:
+                sorted_dist = sorted(dist_lis, reverse=True)
                 for d in sorted_dist:
-                    energy = 0.225*(energy - 10) / (d**0.5)
-    
-            # add positive value to the grid point with 0 energy
-            # if energy == 0:
-            #     dist1 = [np.linalg.norm(np.array(gridcoord[i]) - np.array(at_pdbqt[j])) for j in range(0, len(at_pdbqt))]
-            #     energy = min(dist1)
-
-            # if 0 <= energy <= 50:
-            #     energy = 0.029 * energy ** 2.5 + 1
+                    energy = 0.225 * (energy - 10) / (d ** 0.5)
 
             gridmap.write(f"{energy:.3f}\n")
 

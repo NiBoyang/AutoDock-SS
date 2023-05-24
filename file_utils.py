@@ -1,21 +1,28 @@
-def createFolder(libpath):
-    import os, shutil
-    dir_name = libpath
-    files = os.listdir(dir_name)
-    for i in files:
-        os.mkdir(os.path.join(dir_name , i.split(".")[0]))
-        shutil.copy(os.path.join(dir_name , i), os.path.join(dir_name , i.split(".")[0]))
-        os.remove(os.path.join(dir_name, i))
+import os
+import shutil
+
+def create_folder(libpath):
+    """
+    Create a folder for each file in the given directory and move the file into its respective folder.
+    """
+    files = os.listdir(libpath)
+    for file in files:
+        folder_path = os.path.join(libpath, file.split(".")[0])
+        os.mkdir(folder_path)
+        shutil.move(os.path.join(libpath, file), folder_path)
 
 # from modify_pdbqt import modify_pdbqt
 def modify_pdbqt(pdbqt_file):
-    # list to store file lines
-    lines = []
+    """
+    Modify the given pdbqt file by removing lines that start with specific keywords.
+    """
     keywords = ("REMARK", "ROOT", "ENDROOT", "BRANCH", "ENDBRANCH", "TORSDOF")
-    # read file
+    
     with open(pdbqt_file, 'r') as fp:
-        # read an store all lines into list
-        lines = fp.readlines()
+        lines = [line for line in fp if not line.startswith(keywords)]
+
+    with open(pdbqt_file, 'w') as fp:
+        fp.writelines(lines)
 
 def extract_best_pos(dlgfile):
     with open(dlgfile, "r") as tmpfile:
