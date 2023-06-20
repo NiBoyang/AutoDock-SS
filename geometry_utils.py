@@ -2,7 +2,17 @@ import numpy as np
 from rdkit import Chem
 
 def boxcal(mymol):
-    coords = np.array([atom.GetPos() for atom in mymol.GetAtoms()])
+    icn = 0
+    tlist, x_coords, y_coords, z_coords = [], [], [], []
+    # sum_x_coords, sum_y_coords, sum_z_coords, sum_denominator = 0, 0, 0, 0  # accumulators
+    # pd = Chem.GetPeriodicTable()  # get the periodic table for atomic mass
+
+    for atom in mymol.GetAtoms():
+        # get the 3d coordinates of each atom
+        pos = mymol.GetConformer().GetAtomPosition(icn)
+        tlist.append(pos)
+        icn += 1
+    coords = np.array(tlist)
     x_coords, y_coords, z_coords = coords.T
 
     sim_center = np.array([np.mean(x_coords), np.mean(y_coords), np.mean(z_coords)])

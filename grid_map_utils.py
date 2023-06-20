@@ -173,21 +173,20 @@ def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoo
 
             gridmap.write(f"{energy:.3f}\n")
 
-def general_map(at, target_ligand, folder, spacing, npts, gridcenter, gridmap_coords, target_coords, filename):
-    with open(os.path.join(folder, f"{filename}.{at}.map"), "w") as gridmap:
-        gridmap.write(f"GRID_PARAMETER_FILE\n\n")
-        gridmap.write(f"GRID_CENTER {gridcenter[0]:.3f} {gridcenter[1]:.3f} {gridcenter[2]:.3f}\n")
-        gridmap.write(f"GRID_SIZE {npts[0]} {npts[1]} {npts[2]}\n")
-        gridmap.write(f"GRID_SPACING {spacing}\n\n")
-        gridmap.write(f"MACROMOLECULE {filename}.pdbqt\n\n")
-        gridmap.write(f"GRID_DATA_FILE {filename}.{at}.map\n\n")
-        gridmap.write(f"ATOM_TYPE {at}\n\n")
+def general_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoord, filename, at):
+    with open(f"{folder}{filename}.{at}.map", "w") as gridmap:
+        gridmap.write("GRID_PARAMETER_FILE " + folder + "\ligand.gpf\n")
+        gridmap.write(f"GRID_DATA_FILE {filename}.maps.fld\n")
+        gridmap.write(f"MACROMOLECULE {filename}.pdbqt\n")
+        gridmap.write("SPACING " + str(spacing) + "\n")
+        gridmap.write("NELEMENTS " + str(npts[0]) + " " + str(npts[1]) + " " + str(npts[2]) + "\n")
+        gridmap.write("CENTER " + str(gridcenter[0]) + " " + str(gridcenter[1]) + " " + str(gridcenter[2]) + "\n")
 
-        for i in range(len(gridmap_coords)):
+        for i in range(len(gridcoord)):
             gridmap.write("0.00\n")
 
 def elec_map(folder, spacing, npts, gridcenter, gridmap_coords, ligand_coords, atomic_partial_charge, filename):
-    with open(os.path.join(folder, f"{filename}.e.map"), "w") as e_gridmap:
+    with open(f"{folder}{filename}.e.map", "w") as e_gridmap:
         e_gridmap.write("GRID_PARAMETER_FILE " + folder + "\ligand.gpf\n")
         e_gridmap.write(f"GRID_DATA_FILE {filename}.maps.fld\n")
         e_gridmap.write(f"MACROMOLECULE {filename}.pdbqt\n")
