@@ -12,7 +12,7 @@ from geometry_utils import *
 from file_utils import *
 from roc_auc import *
 import glob
-import multiprocessing
+import psutil
 
 # Common Variables
 # Change them to yours
@@ -25,8 +25,8 @@ dlg_original_path = os.getcwd() # directory for storing dlg files
 sdfgz_files = glob.glob(f"{lib_path}*.sdf.gz")
 supported_atom_types = ["HD", "C", "A", "N", "NA", "OA", "F", "P", "SA", "S",
                         "Cl", "Br", "I", "Mg", "Ca", "Mn", "Fe", "Zn", "d"]
-env = os.environ.copy().update(OMP_NUM_THREADS=192)
-n_jobs = multiprocessing.cpu_count()
+env = os.environ.copy().update(OMP_NUM_THREADS=psutil.cpu_count(logical=True))
+n_jobs = psutil.cpu_count(logical=False)
 
 # Global variables
 def get_files_with_extension(directory, extension):
