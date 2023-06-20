@@ -16,13 +16,13 @@ import psutil
 
 # Common Variables
 # Change them to yours
-autodock_gpu_exec_path = "/root/AutoDock-GPU/bin/autodock_gpu_128wi"
+autodock_gpu_exec_path = "/root/AutoDock-GPU/bin/autodock_gpu_128wi" # directory of Autodock-GPU exec file
 lib_path = f'/root/autodl-tmp/cache4/enamine_2/lib/' # directory of your VS library
 lig_path = f'/root/autodl-tmp/cache4/enamine_2/lig/' # directory of your reference ligand
 path_of_scripts = "/root/autodl-tmp/adss-scripts/" # directory of Autodock-SS scripts
 os.chdir(path_of_scripts)
 dlg_original_path = os.getcwd() # directory for storing dlg files
-sdfgz_files = glob.glob(f"{lib_path}*.sdf.gz")
+sdfgz_files = glob.glob(f"{lib_path}*.sdf.gz") # the VS library file should have the extension of .sdf.gz
 supported_atom_types = ["HD", "C", "A", "N", "NA", "OA", "F", "P", "SA", "S",
                         "Cl", "Br", "I", "Mg", "Ca", "Mn", "Fe", "Zn", "d"]
 env = os.environ.copy().update(OMP_NUM_THREADS=psutil.cpu_count(logical=True))
@@ -32,7 +32,7 @@ n_jobs = psutil.cpu_count(logical=False)
 def get_files_with_extension(directory, extension):
     return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith(extension)]
 
-pdbqt_files = get_files_with_extension(lig_path, ".pdbqt")
+pdbqt_files = get_files_with_extension(lig_path, ".pdbqt") # the reference ligand file should have .pdbqt extension
 if not pdbqt_files:
     raise ValueError("No .pdbqt files found in the specified ligand path.")
 pdbqt_path = pdbqt_files[0]
@@ -41,14 +41,13 @@ ref_path = pdbqt_path.replace(".pdbqt", ".sdf")
 
 # Functions
 def calculate_grid_dimensions(lig_path, lib_path):
-#     pdbqt_files = get_files_with_extension(lig_path, ".pdbqt")
-#     if not pdbqt_files:
-#         raise ValueError("No .pdbqt files found in the specified ligand path.")
 
-#     pdbqt_path = pdbqt_files[0]
-    
-#     global ref_path
-#     ref_path = pdbqt_path.replace(".pdbqt", ".sdf")
+    """
+    This function calculates the grid dimensions for the docking process. It uses the reference ligand and the library of molecules
+    to determine the size of the grid box that will be used in the docking simulations. The grid dimensions are calculated based on 
+    the size of the molecules and their spatial arrangement. The function uses subprocess calls to run external programs for file 
+    conversion and manipulation. The results are written to a grid.txt file which is used in the subsequent docking process.
+    """
 
     subprocess.check_call(f"obabel -ipdbqt {pdbqt_path} -osdf -O {ref_path}", shell=True)
     subprocess.check_call(f"cp {ref_path} {lib_path}", shell=True)
@@ -74,6 +73,13 @@ center    {center[0]:.3f} {center[1]:.3f} {center[2]:.3f}\
     print("Finished creating 'grid.txt'")
 
 def create_map_files(lig_path, grid_file_path, pdbqt_path, n_jobs):
+    
+    """
+    This function creates map files for the docking process. It uses the reference ligand and the grid dimensions calculated 
+    in the previous step to generate map files for each atom type. The function uses multiprocessing to speed up the map file 
+    generation process.
+    """
+    
     supported_atom_types = ["HD", "C", "A", "N", "NA", "OA", "F", "P", "SA", "S",
                             "Cl", "Br", "I", "Mg", "Ca", "Mn", "Fe", "Zn", "d"]
 
