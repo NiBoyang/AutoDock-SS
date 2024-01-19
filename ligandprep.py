@@ -1,3 +1,5 @@
+# Adapted from AutoDockTools inbuilt prepare_ligand4.py
+
 import os
 
 from MolKit import Read
