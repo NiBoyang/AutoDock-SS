@@ -1,6 +1,9 @@
-# AutoDock-SS
+## Preparation
+1. The supported reference ligand should be in the 'pdbqt' format. The compound library should be a compressed SDF file with the extension '.sdf.gz'
+2. Change the common variables in the 'adss_main.py' to yours
+3. create a conda environment using the env.yaml file
 
-## Single reference mode
-1. Change the common variables to yours
-2. python adss_main.py
+## Run AutoDock-SS
+python adss_main.py
+
 
