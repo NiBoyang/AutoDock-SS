@@ -1,2 +1,2 @@
-
+## DUDE_Augmented_Prepared
 This document encompasses the prepared Augmented DUD-E database utilized for testing the multi-reference mode, wherein all reference ligands have been superimposed. It is noteworthy that small molecules evidently not located in the same binding pocket have been excluded. Additionally, if the Augmented DUD-E database does not contain a reference ligand present in the DUD-E database, such a ligand is also included.
