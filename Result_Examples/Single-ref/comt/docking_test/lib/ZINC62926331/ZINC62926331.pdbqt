@@ -1,0 +1,36 @@
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_3 
+REMARK    2  A    between atoms: C_3  and  C_17 
+REMARK       I    between atoms: N_6  and  C_8 
+REMARK       I    between atoms: C_8  and  N_10 
+REMARK    3  A    between atoms: C_14  and  O_16 
+ROOT
+HETATM    1  C   UNL     1       1.256  -0.324   1.846  1.00  0.00     0.066 C 
+HETATM    2  C   UNL     1       0.235  -0.053   2.974  1.00  0.00     0.042 C 
+HETATM    3  C   UNL     1      -0.669  -1.311   2.931  1.00  0.00     0.129 C 
+HETATM    4  N   UNL     1       0.284  -2.404   2.630  1.00  0.00    -0.333 N 
+HETATM    5  C   UNL     1       1.236  -1.851   1.648  1.00  0.00     0.148 C 
+HETATM    6  C   UNL     1       0.283  -3.647   3.149  1.00  0.00     0.320 C 
+HETATM    7  O   UNL     1      -0.453  -3.918   4.078  1.00  0.00    -0.247 OA
+HETATM    8  N   UNL     1       1.098  -4.591   2.638  1.00  0.00    -0.332 N 
+HETATM    9  C   UNL     1       1.877  -4.329   1.420  1.00  0.00     0.127 C 
+HETATM   10  C   UNL     1       1.593  -5.440   0.404  1.00  0.00     0.022 C 
+HETATM   11  C   UNL     1       1.875  -6.799   1.049  1.00  0.00     0.035 C 
+HETATM   12  C   UNL     1       0.949  -6.996   2.251  1.00  0.00     0.136 C 
+HETATM   13  C   UNL     1       1.230  -5.901   3.291  1.00  0.00     0.159 C 
+ENDROOT
+BRANCH   1  14
+HETATM   14  C   UNL     1       0.828   0.384   0.559  1.00  0.00     0.018 C 
+HETATM   15  C   UNL     1       0.855   1.898   0.778  1.00  0.00     0.006 C 
+ENDBRANCH   1  14
+BRANCH   1  16
+HETATM   16  C   UNL     1       2.631   0.132   2.261  1.00  0.00     0.183 C 
+HETATM   17  O   UNL     1       2.839   1.311   2.491  1.00  0.00    -0.647 OA
+HETATM   18  O   UNL     1       3.536  -0.679   2.366  1.00  0.00    -0.647 OA
+ENDBRANCH   1  16
+BRANCH  12  19
+HETATM   19  O   UNL     1       1.191  -8.278   2.834  1.00  0.00    -0.394 OA
+HETATM   20  H   UNL     1       0.638  -8.472   3.603  1.00  0.00     0.210 HD
+ENDBRANCH  12  19
+TORSDOF 3

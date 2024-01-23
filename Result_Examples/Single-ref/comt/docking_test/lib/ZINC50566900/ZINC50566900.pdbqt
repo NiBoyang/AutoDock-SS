@@ -1,0 +1,36 @@
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK       I    between atoms: N_6  and  C_9 
+REMARK       I    between atoms: C_9  and  N_11 
+REMARK       I    between atoms: N_11  and  C_12 
+REMARK    1  A    between atoms: C_12  and  C_14 
+REMARK    2  A    between atoms: C_14  and  C_15 
+REMARK    3  A    between atoms: C_15  and  C_16 
+ROOT
+HETATM    1  C   UNL     1      -0.026   1.525   0.011  1.00  0.00     0.012 C 
+HETATM    2  C   UNL     1      -0.005  -0.005   0.002  1.00  0.00     0.004 C 
+HETATM    3  C   UNL     1       0.711  -0.499  -1.257  1.00  0.00     0.008 C 
+HETATM    4  C   UNL     1       0.704  -2.029  -1.283  1.00  0.00     0.020 C 
+HETATM    5  C   UNL     1       1.458  -2.559  -0.059  1.00  0.00     0.128 C 
+HETATM    6  N   UNL     1       0.867  -1.973   1.151  1.00  0.00    -0.329 N 
+HETATM    7  C   UNL     1       0.741  -0.512   1.241  1.00  0.00     0.088 C 
+HETATM    8  C   UNL     1       2.133   0.119   1.296  1.00  0.00     0.033 C 
+HETATM    9  C   UNL     1       0.447  -2.761   2.161  1.00  0.00     0.325 C 
+HETATM   10  O   UNL     1       0.044  -2.263   3.194  1.00  0.00    -0.247 OA
+HETATM   11  N   UNL     1       0.473  -4.102   2.026  1.00  0.00    -0.279 N 
+HETATM   12  C   UNL     1      -0.042  -4.888   2.992  1.00  0.00     0.226 C 
+HETATM   13  O   UNL     1      -0.529  -4.388   3.983  1.00  0.00    -0.273 OA
+HETATM   14  H   UNL     1       0.864  -4.502   1.232  1.00  0.00     0.173 HD
+ENDROOT
+BRANCH  12  15
+HETATM   15  C   UNL     1      -0.012  -6.386   2.840  1.00  0.00     0.114 C 
+BRANCH  15  16
+HETATM   16  C   UNL     1      -0.655  -7.036   4.067  1.00  0.00     0.122 C 
+BRANCH  16  17
+HETATM   17  C   UNL     1      -0.625  -8.535   3.916  1.00  0.00     0.172 C 
+HETATM   18  O   UNL     1      -0.135  -9.037   2.919  1.00  0.00    -0.648 OA
+HETATM   19  O   UNL     1      -1.091  -9.246   4.790  1.00  0.00    -0.648 OA
+ENDBRANCH  16  17
+ENDBRANCH  15  16
+ENDBRANCH  12  15
+TORSDOF 3

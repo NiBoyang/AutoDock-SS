@@ -1,0 +1,40 @@
+MODEL        8
+USER    Run = 8
+USER
+USER    Estimated Free Energy of Binding    = -37.94 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -38.24 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -33.88 kcal/mol
+USER        Electrostatic Energy            =  -4.36 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -38.24 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.15 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.30 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.15 kcal/mol
+USER
+USER
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_3  and  C_12 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -3.931  -9.657 -18.544 +0.00 +0.62    +0.069 C 
+HETATM    2  C   UNL     1      -3.987 -11.077 -18.043 -5.16 +0.02    +0.022 A 
+HETATM    3  C   UNL     1      -3.642 -12.099 -18.856 -5.19 +0.12    +0.046 A 
+HETATM    4  C   UNL     1      -3.704 -13.424 -18.361 -9.85 -1.71    +0.258 A 
+HETATM    5  O   UNL     1      -3.399 -14.362 -19.076 -2.23 -2.66    -0.267 OA
+HETATM    6  N   UNL     1      -4.105 -13.638 -17.092 +0.00 -0.56    -0.275 N 
+HETATM    7  H   UNL     1      -4.151 -14.572 -16.735 +0.00 +0.55    +0.173 HD
+HETATM    8  C   UNL     1      -4.443 -12.601 -16.303 -5.49 +0.04    +0.327 A 
+HETATM    9  O   UNL     1      -4.802 -12.810 -15.160 -3.99 -2.10    -0.247 OA
+HETATM   10  N   UNL     1      -4.384 -11.337 -16.759 +0.00 +0.15    -0.312 N 
+HETATM   11  H   UNL     1      -4.633 -10.580 -16.154 -1.97 +0.94    +0.170 HD
+ENDROOT
+BRANCH   3  12
+HETATM   12  C   UNL     1      -3.198 -11.832 -20.271 +0.00 +0.68    +0.161 C 
+HETATM   13 CL   UNL     1      -1.411 -11.592 -20.304 +0.00 -0.46    -0.125 Cl
+ENDBRANCH   3  12
+TORSDOF 1
+TER
+ENDMDL

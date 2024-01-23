@@ -1,0 +1,35 @@
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_5 
+REMARK    2  A    between atoms: C_5  and  N_6 
+REMARK    3  A    between atoms: N_6  and  C_7 
+ROOT
+HETATM    1  C   UNL     1       2.934  -0.306  -2.309  1.00  0.00     0.703 A 
+HETATM    2  N   UNL     1       2.603  -1.071  -3.382  1.00  0.00    -0.181 N 
+HETATM    3  H   UNL     1       1.745  -1.489  -3.552  1.00  0.00     0.184 HD
+HETATM    4  C   UNL     1       3.732  -1.140  -4.188  1.00  0.00     0.164 A 
+HETATM    5  C   UNL     1       4.716  -0.394  -3.548  1.00  0.00     0.185 A 
+HETATM    6  N   UNL     1       4.185   0.092  -2.424  1.00  0.00    -0.044 NA
+HETATM    7  N   UNL     1       5.965  -0.289  -4.139  1.00  0.00    -0.285 N 
+HETATM    8  C   UNL     1       6.209  -0.902  -5.312  1.00  0.00     0.332 A 
+HETATM    9  O   UNL     1       7.311  -0.800  -5.816  1.00  0.00    -0.246 OA
+HETATM   10  N   UNL     1       5.266  -1.626  -5.939  1.00  0.00    -0.269 N 
+HETATM   11  C   UNL     1       4.031  -1.763  -5.412  1.00  0.00     0.282 A 
+HETATM   12  O   UNL     1       3.185  -2.422  -5.990  1.00  0.00    -0.265 OA
+HETATM   13  C   UNL     1       5.582  -2.274  -7.214  1.00  0.00     0.164 C 
+HETATM   14  C   UNL     1       7.020   0.491  -3.487  1.00  0.00     0.163 C 
+ENDROOT
+BRANCH   1  15
+HETATM   15  N   UNL     1       2.093   0.010  -1.267  1.00  0.00    -0.223 N 
+HETATM   16  H   UNL     1       2.409   0.568  -0.540  1.00  0.00     0.177 HD
+BRANCH  15  17
+HETATM   17  C   UNL     1       0.718  -0.497  -1.257  1.00  0.00     0.146 C 
+BRANCH  17  18
+HETATM   18  C   UNL     1       0.002  -0.004   0.002  1.00  0.00    -0.035 C 
+HETATM   19  C   UNL     1      -0.019   1.526   0.010  1.00  0.00     0.016 C 
+HETATM   20  C   UNL     1       0.742  -0.511   1.242  1.00  0.00     0.016 C 
+HETATM   21  C   UNL     1      -1.433  -0.534   0.013  1.00  0.00     0.016 C 
+ENDBRANCH  17  18
+ENDBRANCH  15  17
+ENDBRANCH   1  15
+TORSDOF 3

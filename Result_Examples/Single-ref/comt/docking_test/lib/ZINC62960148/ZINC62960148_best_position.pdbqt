@@ -1,0 +1,53 @@
+MODEL        47
+USER    Run = 47
+USER
+USER    Estimated Free Energy of Binding    = -42.66 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -43.55 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -16.88 kcal/mol
+USER        Electrostatic Energy            = -26.67 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -43.55 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -1.17 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.89 kcal/mol
+USER    (4) Unbound System's Energy         =  -1.17 kcal/mol
+USER
+USER
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_3 
+REMARK       I    between atoms: N_6  and  C_9 
+REMARK       I    between atoms: C_9  and  N_12 
+REMARK    2  A    between atoms: N_12  and  CA_13 
+REMARK    3  A    between atoms: CA_13  and  C_15 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNK A   0      -4.685  -7.510 -20.213 +0.00 -0.15    -0.041 C 
+HETATM    2  C   UNK A   0      -5.070  -7.717 -18.747 +0.00 +0.13    +0.029 C 
+HETATM    3  C   UNK A   0      -3.959  -8.496 -18.036 +0.00 +1.27    +0.128 C 
+HETATM    4  N   UNK A   0      -3.707  -9.742 -18.776 -5.68 -3.80    -0.334 N 
+HETATM    5  C   UNK A   0      -3.416  -9.662 -20.213 +0.00 +1.11    +0.128 C 
+HETATM    6  C   UNK A   0      -4.534  -8.870 -20.899 +0.00 +0.12    +0.029 C 
+HETATM    7  C   UNK A   0      -3.742 -10.933 -18.146 +0.00 +0.60    +0.319 C 
+HETATM    8  O   UNK A   0      -3.892 -10.980 -16.940 -1.13 -0.56    -0.247 OA
+HETATM    9  C   UNK A   0      -3.360  -6.751 -20.290 +0.00 +0.05    +0.015 C 
+ATOM     10  N   ALA A   1      -3.610 -12.073 -18.854 +0.00 -0.85    -0.329 N 
+ATOM     11  H   ALA A   1      -3.417 -12.034 -19.804 +0.00 +0.67    +0.165 HD
+ENDROOT
+BRANCH  10  12
+ATOM     12  CA  ALA A   1      -3.758 -13.369 -18.188 +0.00 -0.28    +0.183 C 
+ATOM     13  CB  ALA A   1      -5.224 -13.580 -17.804 +0.00 +0.13    +0.043 C 
+BRANCH  12  14
+ATOM     14  C   ALA A   1      -3.322 -14.466 -19.124 +0.00 +2.44    +0.196 C 
+ATOM     15  O   ALA A   1      -2.947 -14.193 -20.251 -4.95-13.29    -0.646 OA
+ATOM     16  OXT ALA A   1      -3.341 -15.627 -18.752 -5.12-14.28    -0.646 OA
+ENDBRANCH  12  14
+ENDBRANCH  10  12
+BRANCH   1  17
+HETATM   17  C   UNK A   0      -5.777  -6.702 -20.917 +0.00 +0.01    +0.005 C 
+HETATM   18  C   UNK A   0      -5.828  -5.292 -20.327 +0.00 +0.01    +0.006 C 
+ENDBRANCH   1  17
+TORSDOF 3
+TER
+ENDMDL

@@ -1,0 +1,41 @@
+MODEL        76
+USER    Run = 76
+USER
+USER    Estimated Free Energy of Binding    = -35.48 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -35.78 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -10.02 kcal/mol
+USER        Electrostatic Energy            = -25.76 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -35.78 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.32 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.30 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.32 kcal/mol
+USER
+USER
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK       I    between atoms: N_6  and  C_8 
+REMARK    1  A    between atoms: C_8  and  C_10 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1       0.993 -12.292 -17.852 +0.00 +0.03    +0.011 C 
+HETATM    2  C   UNL     1      -0.477 -11.885 -17.971 +0.00 -0.00    -0.000 C 
+HETATM    3  C   UNL     1      -0.755 -10.698 -17.046 +0.00 +0.03    +0.011 C 
+HETATM    4  C   UNL     1      -2.217 -10.270 -17.190 +0.00 -0.00    -0.000 C 
+HETATM    5  C   UNL     1      -3.128 -11.430 -16.777 +0.00 +0.36    +0.130 C 
+HETATM    6  N   UNL     1      -2.768 -12.617 -17.562 +0.00 -1.03    -0.342 N 
+HETATM    7  C   UNL     1      -1.369 -13.066 -17.562 +0.00 +0.41    +0.130 C 
+HETATM    8  C   UNL     1      -3.704 -13.285 -18.266 +0.00 -0.67    +0.320 C 
+HETATM    9  O   UNL     1      -4.875 -12.984 -18.158 +0.00 -0.75    -0.261 OA
+HETATM   10  C   UNL     1      -2.498  -9.893 -18.646 +0.00 +0.06    +0.011 C 
+ENDROOT
+BRANCH   8  11
+HETATM   11  C   UNL     1      -3.300 -14.401 -19.174 +0.00 +2.93    +0.270 C 
+HETATM   12  O   UNL     1      -2.932 -14.162 -20.304 -4.63-11.92    -0.640 OA
+HETATM   13  O   UNL     1      -3.347 -15.674 -18.737 -5.39-15.20    -0.640 OA
+ENDBRANCH   8  11
+TORSDOF 1
+TER
+ENDMDL

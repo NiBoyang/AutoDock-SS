@@ -1,0 +1,37 @@
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_4  and  N_10 
+REMARK    2  A    between atoms: CA_5  and  C_7 
+REMARK       I    between atoms: N_10  and  C_11 
+REMARK    3  A    between atoms: C_11  and  C_13 
+REMARK    4  A    between atoms: C_13  and  C_14 
+ROOT
+HETATM    1  N   UNL     1       3.569  -0.586   0.289  1.00  0.00    -0.309 N 
+HETATM    2  C   UNL     1       4.720   0.114   0.336  1.00  0.00     0.223 C 
+HETATM    3  O   UNL     1       4.697   1.324   0.250  1.00  0.00    -0.273 OA
+HETATM    4  H   UNL     1       3.587  -1.554   0.358  1.00  0.00     0.170 HD
+ENDROOT
+BRANCH   1   5
+HETATM    5  C   UNL     1       2.360   0.076   0.143  1.00  0.00     0.166 A 
+HETATM    6  N   UNL     1       2.338   1.387  -0.063  1.00  0.00    -0.239 NA
+HETATM    7  C   UNL     1       1.185   2.014  -0.202  1.00  0.00     0.138 A 
+HETATM    8  C   UNL     1      -0.010   1.308  -0.135  1.00  0.00     0.137 A 
+HETATM    9  N   UNL     1      -0.003   0.008   0.069  1.00  0.00    -0.249 NA
+HETATM   10  CA  UNL     1       1.152  -0.637   0.211  1.00  0.00     0.178 A 
+BRANCH  10  11
+HETATM   11  C   UNL     1       1.164  -2.095   0.439  1.00  0.00     0.233 C 
+HETATM   12  O   UNL     1       2.093  -2.611   1.044  1.00  0.00    -0.643 OA
+HETATM   13  OXT UNL     1       0.245  -2.786   0.024  1.00  0.00    -0.643 OA
+ENDBRANCH  10  11
+ENDBRANCH   1   5
+BRANCH   2  14
+HETATM   14  C   UNL     1       6.034  -0.605   0.494  1.00  0.00     0.111 C 
+BRANCH  14  15
+HETATM   15  C   UNL     1       7.175   0.414   0.518  1.00  0.00     0.017 C 
+HETATM   16  C   UNL     1       7.324   1.069  -0.836  1.00  0.00    -0.026 C 
+HETATM   17  C   UNL     1       8.581   1.133  -1.189  1.00  0.00    -0.030 C 
+HETATM   18  C   UNL     1       9.476   0.537  -0.128  1.00  0.00     0.027 C 
+HETATM   19  C   UNL     1       8.526  -0.294   0.766  1.00  0.00     0.012 C 
+ENDBRANCH  14  15
+ENDBRANCH   2  14
+TORSDOF 4

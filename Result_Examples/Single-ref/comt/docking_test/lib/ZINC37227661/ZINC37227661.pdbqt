@@ -1,0 +1,39 @@
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_3 
+REMARK    2  A    between atoms: C_2  and  C_12 
+REMARK    3  A    between atoms: C_3  and  S_4 
+REMARK    4  A    between atoms: S_4  and  C_5 
+REMARK    5  A    between atoms: C_6  and  N_11 
+REMARK       I    between atoms: C_12  and  N_14 
+ROOT
+HETATM    1  C   UNL     1       0.704  -0.654  -4.071  1.00  0.00     0.119 A 
+HETATM    2  C   UNL     1       0.256  -0.462  -5.381  1.00  0.00     0.061 A 
+HETATM    3  C   UNL     1       1.011  -0.966  -6.430  1.00  0.00     0.033 A 
+HETATM    4  C   UNL     1       2.187  -1.644  -6.134  1.00  0.00     0.022 A 
+HETATM    5  C   UNL     1       2.567  -1.796  -4.816  1.00  0.00     0.118 A 
+HETATM    6  N   UNL     1       1.833  -1.302  -3.835  1.00  0.00    -0.252 NA
+ENDROOT
+BRANCH   1   7
+HETATM    7  S   UNL     1      -0.239  -0.022  -2.723  1.00  0.00    -0.107 SA
+BRANCH   7   8
+HETATM    8  C   UNL     1       0.718  -0.497  -1.257  1.00  0.00     0.094 C 
+BRANCH   8   9
+HETATM    9  C   UNL     1       0.002  -0.004   0.002  1.00  0.00     0.083 C 
+HETATM   10  C   UNL     1      -0.019   1.526   0.010  1.00  0.00     0.020 C 
+BRANCH   9  11
+HETATM   11  C   UNL     1       0.731  -0.503   1.223  1.00  0.00     0.220 C 
+HETATM   12  O   UNL     1       1.725  -1.187   1.099  1.00  0.00    -0.273 OA
+HETATM   13  N   UNL     1       0.278  -0.191   2.453  1.00  0.00    -0.370 N 
+HETATM   14  H   UNL     1      -0.517   0.356   2.553  1.00  0.00     0.159 HD
+HETATM   15  H   UNL     1       0.747  -0.512   3.239  1.00  0.00     0.159 HD
+ENDBRANCH   9  11
+ENDBRANCH   8   9
+ENDBRANCH   7   8
+ENDBRANCH   1   7
+BRANCH   2  16
+HETATM   16  N   UNL     1      -0.936   0.229  -5.630  1.00  0.00    -0.397 N 
+HETATM   17  H   UNL     1      -1.459   0.578  -4.891  1.00  0.00     0.156 HD
+HETATM   18  H   UNL     1      -1.240   0.358  -6.542  1.00  0.00     0.156 HD
+ENDBRANCH   2  16
+TORSDOF 5

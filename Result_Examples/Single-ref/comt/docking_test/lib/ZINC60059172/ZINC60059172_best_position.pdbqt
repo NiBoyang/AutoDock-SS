@@ -1,0 +1,73 @@
+MODEL        19
+USER    Run = 19
+USER
+USER    Estimated Free Energy of Binding    = -45.22 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -46.71 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -43.21 kcal/mol
+USER        Electrostatic Energy            =  -3.50 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -46.71 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.74 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.49 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.74 kcal/mol
+USER
+USER
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_9  and  C_25 
+REMARK    2  A    between atoms: C_10  and  S_12 
+REMARK    3  A    between atoms: S_12  and  C_13 
+REMARK    4  A    between atoms: C_13  and  C_14 
+REMARK    5  A    between atoms: C_22  and  N_24 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -4.085 -10.963 -18.005 -5.15 +0.00    +0.001 A 
+HETATM    2  C   UNL     1      -4.467 -11.212 -16.693 -6.36 -0.00    +0.002 A 
+HETATM    3  C   UNL     1      -4.471 -12.482 -16.191 -5.50 +0.00    +0.032 A 
+HETATM    4  C   UNL     1      -4.085 -13.550 -17.006 -5.13 +0.14    +0.075 A 
+HETATM    5  C   UNL     1      -3.698 -13.293 -18.341 -7.70 -0.20    +0.061 A 
+HETATM    6  C   UNL     1      -3.703 -11.986 -18.827 -5.17 +0.05    +0.019 A 
+HETATM    7  C   UNL     1      -3.297 -14.431 -19.179 -1.60 +2.99    +0.267 A 
+HETATM    8  O   UNL     1      -2.953 -14.273 -20.336 -4.58 -4.87    -0.267 OA
+HETATM    9  N   UNL     1      -3.324 -15.661 -18.616 -2.02 -5.08    -0.253 N 
+HETATM   10  C   UNL     1      -3.712 -15.820 -17.315 +0.00 +0.80    +0.177 A 
+HETATM   11  N   UNL     1      -4.074 -14.819 -16.551 +0.00 -0.71    -0.223 NA
+ENDROOT
+BRANCH  10  12
+HETATM   12  S   UNL     1      -3.728 -17.444 -16.634 +0.00 -0.24    -0.085 SA
+BRANCH  12  13
+HETATM   13  C   UNL     1      -4.396 -17.214 -14.963 +0.00 +0.31    +0.142 C 
+BRANCH  13  14
+HETATM   14  C   UNL     1      -5.455 -18.252 -14.698 +0.00 +0.12    +0.067 A 
+HETATM   15  N   UNL     1      -6.727 -17.936 -14.824 +0.00 -0.11    -0.064 NA
+HETATM   16  C   UNL     1      -7.688 -18.839 -14.601 +0.00 +1.18    +0.768 A 
+HETATM   17  N   UNL     1      -7.363 -20.112 -14.222 +0.00 -0.03    -0.018 N 
+HETATM   18  N   UNL     1      -9.014 -18.771 -14.662 +0.00 +0.19    +0.133 NA
+HETATM   19  C   UNL     1      -6.058 -20.472 -14.078 +0.00 +0.31    +0.222 A 
+HETATM   20  N   UNL     1      -8.573 -20.801 -14.064 +0.00 +0.05    +0.043 NA
+HETATM   21  C   UNL     1      -5.085 -19.539 -14.315 +0.00 +0.14    +0.090 A 
+HETATM   22  O   UNL     1      -5.729 -21.730 -13.704 +0.00 -0.21    -0.169 OA
+HETATM   23  C   UNL     1      -9.540 -19.951 -14.340 +0.00 +0.95    +0.753 A 
+BRANCH  23  24
+HETATM   24  N   UNL     1     -10.902 -20.242 -14.300 +0.00 -0.26    -0.229 N 
+HETATM   25  H   UNL     1     -11.457 -19.861 -13.602 +0.00 +0.19    +0.174 HD
+HETATM   26  H   UNL     1     -11.293 -20.823 -14.970 +0.00 +0.19    +0.174 HD
+ENDBRANCH  23  24
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+ENDBRANCH  10  12
+BRANCH   9  27
+HETATM   27  C   UNL     1      -2.951 -16.781 -19.373 +0.00 +0.40    +0.083 A 
+HETATM   28  C   UNL     1      -1.616 -16.987 -19.703 +0.00 +0.50    +0.146 A 
+HETATM   29  C   UNL     1      -1.252 -18.095 -20.446 +0.00 +0.22    +0.086 A 
+HETATM   30  F   UNL     1      -0.676 -16.107 -19.295 +0.00 -0.66    -0.204 F 
+HETATM   31  C   UNL     1      -2.217 -18.993 -20.869 +0.00 +0.27    +0.119 A 
+HETATM   32  C   UNL     1      -3.547 -18.786 -20.546 +0.00 +0.11    +0.045 A 
+HETATM   33  F   UNL     1      -1.860 -20.073 -21.598 +0.00 -0.37    -0.206 F 
+HETATM   34  C   UNL     1      -3.916 -17.684 -19.801 +0.00 +0.12    +0.036 A 
+ENDBRANCH   9  27
+TORSDOF 5
+TER
+ENDMDL

@@ -1,0 +1,57 @@
+MODEL        75
+USER    Run = 75
+USER
+USER    Estimated Free Energy of Binding    = -55.63 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -56.83 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -51.12 kcal/mol
+USER        Electrostatic Energy            =  -5.71 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -56.83 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.88 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.19 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.88 kcal/mol
+USER
+USER
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_4  and  N_19 
+REMARK    2  A    between atoms: C_6  and  S_8 
+REMARK    3  A    between atoms: S_8  and  N_11 
+REMARK    4  A    between atoms: N_11  and  C_12 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  S   UNL     1      -4.159  -9.477 -18.986 +0.00 +2.27    +0.285 S 
+HETATM    2  O   UNL     1      -4.512  -8.548 -17.970 -3.73 -2.42    -0.198 OA
+HETATM    3  O   UNL     1      -2.969  -9.352 -19.753 -3.77 -2.58    -0.198 OA
+ENDROOT
+BRANCH   1   4
+HETATM    4  C   UNL     1      -4.102 -11.063 -18.221 -4.93 +0.10    +0.084 A 
+HETATM    5  C   UNL     1      -3.748 -12.174 -18.961 -5.10 +0.14    +0.054 A 
+HETATM    6  C   UNL     1      -3.702 -13.423 -18.357 -9.77 -0.18    +0.027 A 
+HETATM    7  C   UNL     1      -4.013 -13.552 -17.009 -4.85 +0.07    +0.035 A 
+HETATM    8  C   UNL     1      -4.365 -12.437 -16.275 -4.84 -0.04    -0.058 A 
+HETATM    9  C   UNL     1      -4.703 -12.576 -14.812 +0.00 +0.35    +0.048 C 
+HETATM   10  C   UNL     1      -4.415 -11.195 -16.880 -7.24 -0.09    +0.032 A 
+BRANCH   6  11
+HETATM   11  N   UNL     1      -3.344 -14.549 -19.103 -6.89 -5.46    -0.399 N 
+HETATM   12  H   UNL     1      -2.476 -14.588 -19.536 +0.00 +1.13    +0.156 HD
+HETATM   13  H   UNL     1      -3.962 -15.291 -19.188 +0.00 +1.23    +0.156 HD
+ENDBRANCH   6  11
+ENDBRANCH   1   4
+BRANCH   1  14
+HETATM   14  N   UNL     1      -5.417  -9.498 -20.064 +0.00 -0.57    -0.140 NA
+BRANCH  14  15
+HETATM   15  C   UNL     1      -6.401 -10.476 -19.966 +0.00 +0.51    +0.161 A 
+HETATM   16  N   UNL     1      -7.149 -10.547 -18.876 +0.00 -0.67    -0.239 NA
+HETATM   17  C   UNL     1      -8.097 -11.455 -18.745 +0.00 +0.33    +0.138 A 
+HETATM   18  C   UNL     1      -8.335 -12.379 -19.743 +0.00 +0.06    +0.028 A 
+HETATM   19  C   UNL     1      -7.567 -12.342 -20.901 +0.00 +0.06    +0.024 A 
+HETATM   20 BR   UNL     1      -9.692 -13.680 -19.538 +0.00 -0.09    -0.050 Br
+HETATM   21  C   UNL     1      -6.585 -11.375 -21.011 +0.00 +0.15    +0.054 A 
+ENDBRANCH  14  15
+ENDBRANCH   1  14
+TORSDOF 4
+TER
+ENDMDL

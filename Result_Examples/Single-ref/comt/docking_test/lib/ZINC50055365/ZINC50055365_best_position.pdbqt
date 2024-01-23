@@ -1,0 +1,80 @@
+MODEL        71
+USER    Run = 71
+USER
+USER    Estimated Free Energy of Binding    = -50.64 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -53.02 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -44.94 kcal/mol
+USER        Electrostatic Energy            =  -8.09 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -53.02 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.28 kcal/mol
+USER    (3) Torsional Free Energy           =  +2.39 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.28 kcal/mol
+USER
+USER
+REMARK  8 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_4 
+REMARK    2  A    between atoms: C_4  and  N_5 
+REMARK       I    between atoms: N_5  and  C_6 
+REMARK    3  A    between atoms: C_6  and  C_8 
+REMARK    4  A    between atoms: C_8  and  N_9 
+REMARK       I    between atoms: N_9  and  C_10 
+REMARK       I    between atoms: C_10  and  N_12 
+REMARK    5  A    between atoms: N_12  and  C_13 
+REMARK    6  A    between atoms: C_18  and  S_19 
+REMARK    7  A    between atoms: S_19  and  C_20 
+REMARK    8  A    between atoms: C_20  and  C_21 
+REMARK       I    between atoms: C_21  and  N_23 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  N   UNL     1      -5.127 -14.016 -13.091 +0.00 -0.70    -0.334 N 
+HETATM    2  C   UNL     1      -4.800 -13.885 -14.391 +0.00 +0.95    +0.321 C 
+HETATM    3  O   UNL     1      -4.446 -14.858 -15.029 +0.00 -0.65    -0.247 OA
+HETATM    4  N   UNL     1      -4.866 -12.677 -14.985 +0.00 -4.16    -0.308 N 
+HETATM    5  H   UNL     1      -5.409 -13.240 -12.581 +0.00 +0.32    +0.164 HD
+HETATM    6  H   UNL     1      -5.209 -11.914 -14.494 -6.00 -1.13    +0.170 HD
+ENDROOT
+BRANCH   4   7
+HETATM    7  C   UNL     1      -4.437 -12.524 -16.310 -5.25 +0.02    +0.053 A 
+HETATM    8  C   UNL     1      -4.350 -11.250 -16.875 -6.36 -0.04    +0.027 A 
+HETATM    9  C   UNL     1      -3.919 -11.106 -18.185 -4.92 +0.02    +0.021 A 
+HETATM   10  C   UNL     1      -3.588 -12.221 -18.932 -5.08 +0.01    +0.002 A 
+HETATM   11  C   UNL     1      -3.680 -13.483 -18.374 -8.58 -0.01    +0.002 A 
+HETATM   12  C   UNL     1      -4.103 -13.637 -17.067 -5.05 +0.06    +0.031 A 
+BRANCH   8  13
+HETATM   13  S   UNL     1      -4.780  -9.831 -15.923 +0.00 -0.90    -0.118 SA
+BRANCH  13  14
+HETATM   14  C   UNL     1      -6.084  -9.030 -16.896 +0.00 +0.57    +0.182 C 
+BRANCH  14  15
+HETATM   15  C   UNL     1      -5.459  -8.210 -17.996 +0.00 +1.05    +0.225 C 
+HETATM   16  O   UNL     1      -4.380  -8.527 -18.449 -3.70 -3.44    -0.273 OA
+HETATM   17  N   UNL     1      -6.101  -7.127 -18.476 +0.00 -1.12    -0.369 N 
+HETATM   18  H   UNL     1      -6.964  -6.874 -18.113 +0.00 +0.39    +0.159 HD
+HETATM   19  H   UNL     1      -5.699  -6.599 -19.183 +0.00 +0.46    +0.159 HD
+ENDBRANCH  14  15
+ENDBRANCH  13  14
+ENDBRANCH   8  13
+ENDBRANCH   4   7
+BRANCH   1  20
+HETATM   20  C   UNL     1      -5.056 -15.329 -12.445 +0.00 +0.41    +0.227 C 
+BRANCH  20  21
+HETATM   21  C   UNL     1      -6.313 -16.105 -12.742 +0.00 +0.40    +0.235 C 
+HETATM   22  N   UNL     1      -6.358 -17.432 -12.508 +0.00 -0.55    -0.359 N 
+HETATM   23  H   UNL     1      -5.582 -17.887 -12.148 +0.00 +0.24    +0.162 HD
+HETATM   24  O   UNL     1      -7.285 -15.535 -13.193 +0.00 -0.47    -0.272 OA
+BRANCH  22  25
+HETATM   25  C   UNL     1      -7.581 -18.185 -12.798 +0.00 +0.18    +0.126 C 
+BRANCH  25  26
+HETATM   26  C   UNL     1      -8.325 -18.471 -11.493 +0.00 -0.01    -0.005 C 
+HETATM   27  C   UNL     1      -7.326 -18.518 -10.335 +0.00 +0.01    +0.011 C 
+HETATM   28  C   UNL     1      -9.351 -17.365 -11.238 +0.00 +0.01    +0.011 C 
+ENDBRANCH  25  26
+ENDBRANCH  22  25
+ENDBRANCH  20  21
+ENDBRANCH   1  20
+TORSDOF 8
+TER
+ENDMDL

@@ -1,0 +1,35 @@
+MODEL        81
+USER    Run = 81
+USER
+USER    Estimated Free Energy of Binding    = -18.95 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -18.95 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -13.85 kcal/mol
+USER        Electrostatic Energy            =  -5.10 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -18.95 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.00 kcal/mol
+USER    (4) Unbound System's Energy         =  +0.00 kcal/mol
+USER
+USER
+REMARK  0 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -2.593 -13.593 -17.434 +0.00 +0.01    +0.002 C 
+HETATM    2  C   UNL     1      -3.234 -12.697 -16.333 +0.00 +0.04    +0.015 C 
+HETATM    3  C   UNL     1      -3.029 -11.273 -16.822 +0.00 +0.27    +0.094 C 
+HETATM    4  C   UNL     1      -3.160 -11.503 -18.374 +0.00 +0.30    +0.094 C 
+HETATM    5  C   UNL     1      -2.233 -12.629 -18.615 +0.00 +0.06    +0.015 C 
+HETATM    6  C   UNL     1      -3.347 -10.148 -18.849 +0.00 +1.80    +0.258 C 
+HETATM    7  O   UNL     1      -2.957  -9.671 -19.893 -4.42 -4.53    -0.270 OA
+HETATM    8  N   UNL     1      -4.062  -9.520 -17.860 -2.36 -0.82    -0.119 N 
+HETATM    9  C   UNL     1      -4.093 -10.233 -16.675 +0.00 +0.97    +0.258 C 
+HETATM   10  O   UNL     1      -4.825 -10.064 -15.724 -4.28 -2.60    -0.270 OA
+HETATM   11  O   UNL     1      -4.690  -8.261 -18.025 -2.79 -0.58    -0.075 OA
+ENDROOT
+TORSDOF 0
+TER
+ENDMDL

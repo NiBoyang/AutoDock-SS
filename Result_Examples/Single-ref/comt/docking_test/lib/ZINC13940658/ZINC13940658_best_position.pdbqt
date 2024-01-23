@@ -1,0 +1,79 @@
+MODEL        81
+USER    Run = 81
+USER
+USER    Estimated Free Energy of Binding    = -55.30 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -57.69 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -48.39 kcal/mol
+USER        Electrostatic Energy            =  -9.30 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -57.69 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.88 kcal/mol
+USER    (3) Torsional Free Energy           =  +2.39 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.88 kcal/mol
+USER
+USER
+REMARK  8 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_4 
+REMARK    2  A    between atoms: C_7  and  N_10 
+REMARK       I    between atoms: N_10  and  C_11 
+REMARK    3  A    between atoms: C_11  and  C_13 
+REMARK    4  A    between atoms: C_13  and  C_14 
+REMARK    5  A    between atoms: C_13  and  C_25 
+REMARK    6  A    between atoms: C_14  and  C_15 
+REMARK    7  A    between atoms: C_18  and  O_23 
+REMARK    8  A    between atoms: C_20  and  O_21 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -5.161 -15.832 -17.256 +0.00 +0.53    +0.158 C 
+ENDROOT
+BRANCH   1   2
+HETATM    2  C   UNL     1      -4.474 -16.116 -18.567 +0.00 +1.28    +0.234 C 
+HETATM    3  N   UNL     1      -5.117 -16.807 -19.529 +0.00 -1.16    -0.326 N 
+HETATM    4  H   UNL     1      -5.996 -17.178 -19.355 +0.00 +0.47    +0.169 HD
+HETATM    5  O   UNL     1      -3.340 -15.728 -18.753 -5.08 -5.92    -0.272 OA
+BRANCH   3   6
+HETATM    6  C   UNL     1      -4.517 -16.987 -20.780 +0.00 +0.11    +0.034 A 
+HETATM    7  C   UNL     1      -3.933 -18.204 -21.103 +0.00 +0.08    +0.030 A 
+HETATM    8  C   UNL     1      -3.342 -18.378 -22.340 +0.00 +0.02    +0.010 A 
+HETATM    9  C   UNL     1      -3.332 -17.342 -23.255 +0.00 -0.13    -0.055 A 
+HETATM   10  C   UNL     1      -3.914 -16.128 -22.937 +0.00 +0.03    +0.010 A 
+HETATM   11  C   UNL     1      -4.512 -15.949 -21.704 +0.00 +0.10    +0.030 A 
+BRANCH   9  12
+HETATM   12  C   UNL     1      -2.687 -17.536 -24.604 +0.00 +0.02    +0.010 C 
+HETATM   13  C   UNL     1      -3.750 -17.949 -25.623 +0.00 +0.02    +0.015 C 
+HETATM   14  C   UNL     1      -2.035 -16.226 -25.048 +0.00 +0.03    +0.015 C 
+ENDBRANCH   9  12
+ENDBRANCH   3   6
+ENDBRANCH   1   2
+BRANCH   1  15
+HETATM   15  C   UNL     1      -4.263 -14.945 -16.392 +0.00 +0.20    +0.063 C 
+BRANCH  15  16
+HETATM   16  C   UNL     1      -4.173 -13.571 -17.007 -4.99 -0.05    -0.023 A 
+HETATM   17  C   UNL     1      -4.485 -12.452 -16.250 -5.22 +0.03    +0.077 A 
+HETATM   18  C   UNL     1      -4.401 -11.188 -16.815 -7.02 -0.18    +0.074 A 
+HETATM   19  C   UNL     1      -4.005 -11.047 -18.136 -5.02 +0.07    +0.070 A 
+HETATM   20  C   UNL     1      -3.693 -12.171 -18.889 -5.41 +0.09    +0.037 A 
+HETATM   21  C   UNL     1      -3.772 -13.429 -18.322 -8.48 -0.06    +0.013 A 
+BRANCH  17  22
+HETATM   22  O   UNL     1      -4.874 -12.593 -14.955 -4.72 -3.96    -0.355 OA
+HETATM   23  C   UNL     1      -6.280 -12.622 -14.700 +0.00 +0.54    +0.210 C 
+ENDBRANCH  17  22
+BRANCH  19  24
+HETATM   24  O   UNL     1      -3.921  -9.811 -18.693 -2.45 -3.21    -0.356 OA
+HETATM   25  C   UNL     1      -3.557  -9.745 -20.073 +0.00 +1.88    +0.210 C 
+ENDBRANCH  19  24
+ENDBRANCH  15  16
+ENDBRANCH   1  15
+BRANCH   1  26
+HETATM   26  C   UNL     1      -6.466 -15.124 -17.516 +0.00 +0.52    +0.187 A 
+HETATM   27  N   UNL     1      -7.202 -14.490 -16.636 +0.00 -0.26    -0.111 NA
+HETATM   28  N   UNL     1      -8.234 -14.020 -17.245 +0.00 -0.05    -0.021 NA
+HETATM   29  N   UNL     1      -8.181 -14.343 -18.490 +0.00 -0.05    -0.021 NA
+HETATM   30  N   UNL     1      -7.110 -15.019 -18.684 +0.00 -0.29    -0.111 NA
+ENDBRANCH   1  26
+TORSDOF 8
+TER
+ENDMDL

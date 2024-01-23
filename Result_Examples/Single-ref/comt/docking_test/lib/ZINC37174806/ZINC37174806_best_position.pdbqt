@@ -1,0 +1,41 @@
+MODEL        99
+USER    Run = 99
+USER
+USER    Estimated Free Energy of Binding    = -17.93 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -18.22 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -8.89 kcal/mol
+USER        Electrostatic Energy            =  -9.33 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -18.22 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.09 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.30 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.09 kcal/mol
+USER
+USER
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_2  and  C_3 
+REMARK       I    between atoms: N_2  and  C_8 
+REMARK       I    between atoms: C_8  and  N_10 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -4.774 -12.507 -18.988 +0.00 +0.51    +0.155 C 
+HETATM    2  N   UNL     1      -4.409 -13.817 -18.443 -1.91 -1.18    -0.333 N 
+HETATM    3  C   UNL     1      -3.562 -14.617 -19.120 +0.00 +3.29    +0.316 C 
+HETATM    4  O   UNL     1      -3.333 -15.741 -18.717 -5.02 -5.26    -0.247 OA
+HETATM    5  N   UNL     1      -2.967 -14.171 -20.245 -1.96 -7.33    -0.352 N 
+HETATM    6  H   UNL     1      -3.149 -13.274 -20.567 +0.00 +0.91    +0.160 HD
+HETATM    7  H   UNL     1      -2.358 -14.746 -20.732 +0.00 +1.02    +0.160 HD
+ENDROOT
+BRANCH   2   8
+HETATM    8  C   UNL     1      -4.966 -14.257 -17.161 +0.00 +0.30    +0.098 C 
+HETATM    9  C   UNL     1      -5.767 -13.094 -16.544 +0.00 +0.26    +0.099 C 
+HETATM   10  S   UNL     1      -4.845 -12.716 -15.000 +0.00 -2.17    -0.167 SA
+HETATM   11  C   UNL     1      -3.264 -13.570 -15.422 +0.00 +0.21    +0.076 C 
+HETATM   12  C   UNL     1      -3.822 -14.744 -16.272 +0.00 +0.11    +0.036 C 
+ENDBRANCH   2   8
+TORSDOF 1
+TER
+ENDMDL

@@ -1,0 +1,57 @@
+MODEL        64
+USER    Run = 64
+USER
+USER    Estimated Free Energy of Binding    = -43.37 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -44.56 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -14.91 kcal/mol
+USER        Electrostatic Energy            = -29.65 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -44.56 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.61 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.19 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.61 kcal/mol
+USER
+USER
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CG1_2  and  CB_3 
+REMARK    2  A    between atoms: CB_3  and  CA_5 
+REMARK    3  A    between atoms: CA_5  and  C_6 
+REMARK    4  A    between atoms: CA_5  and  N_9 
+REMARK       I    between atoms: N_9  and  C_11 
+REMARK       I    between atoms: C_11  and  N_13 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  N   ILE A   1      -5.664 -13.546 -18.810 +0.00 -1.07    -0.328 N 
+ATOM      2  H   ILE A   1      -6.013 -12.712 -19.161 +0.00 +0.51    +0.165 HD
+HETATM    3  C   UNK A   0      -5.570 -13.731 -17.478 +0.00 +0.92    +0.319 C 
+HETATM    4  O   UNK A   0      -5.134 -14.776 -17.037 +0.00 -0.78    -0.247 OA
+HETATM    5  N   UNK A   0      -5.961 -12.754 -16.634 +0.00 -0.87    -0.332 N 
+HETATM    6  C   UNK A   0      -5.841 -12.982 -15.182 +0.00 +0.44    +0.129 C 
+HETATM    7  C   UNK A   0      -5.319 -11.727 -14.468 +0.00 -0.08    +0.046 C 
+HETATM    8  C   UNK A   0      -4.237 -11.079 -15.308 +0.00 +0.51    +0.169 C 
+HETATM    9  O   UNK A   0      -4.838 -10.116 -16.164 -4.65 -4.40    -0.389 OA
+HETATM   10  C   UNK A   0      -5.325 -10.512 -17.393 +0.00 +0.63    +0.187 C 
+HETATM   11  C   UNK A   0      -6.478 -11.518 -17.189 +0.00 +0.41    +0.153 C 
+ENDROOT
+BRANCH   1  12
+ATOM     12  CA  ILE A   1      -5.240 -14.607 -19.727 +0.00 +0.79    +0.191 C 
+BRANCH  12  13
+ATOM     13  CB  ILE A   1      -6.008 -15.892 -19.411 +0.00 +0.05    +0.014 C 
+ATOM     14  CG2 ILE A   1      -5.719 -16.938 -20.490 +0.00 +0.03    +0.012 C 
+BRANCH  13  15
+ATOM     15  CG1 ILE A   1      -7.509 -15.594 -19.380 +0.00 +0.00    +0.002 C 
+ATOM     16  CD1 ILE A   1      -7.945 -15.027 -20.732 +0.00 +0.01    +0.005 C 
+ENDBRANCH  13  15
+ENDBRANCH  12  13
+BRANCH  12  17
+ATOM     17  C   ILE A   1      -3.763 -14.853 -19.564 +0.00 +1.54    +0.197 C 
+ATOM     18  O   ILE A   1      -2.963 -14.234 -20.244 -4.97-13.36    -0.646 OA
+ATOM     19  OXT ILE A   1      -3.366 -15.670 -18.750 -5.29-14.93    -0.646 OA
+ENDBRANCH  12  17
+ENDBRANCH   1  12
+TORSDOF 4
+TER
+ENDMDL

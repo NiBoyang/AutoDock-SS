@@ -1,0 +1,40 @@
+MODEL        58
+USER    Run = 58
+USER
+USER    Estimated Free Energy of Binding    = -41.21 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -41.51 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -37.39 kcal/mol
+USER        Electrostatic Energy            =  -4.12 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -41.51 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.22 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.30 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.22 kcal/mol
+USER
+USER
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_5  and  C_7 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -3.883  -9.804 -18.776 -1.81 +1.72    +0.182 A 
+HETATM    2  N   UNL     1      -4.398  -8.638 -18.263 -1.95 -4.28    -0.298 N 
+HETATM    3  C   UNL     1      -4.074  -7.665 -19.160 +0.00 +1.45    +0.297 A 
+HETATM    4  O   UNL     1      -4.380  -6.349 -19.063 +0.00 -0.45    -0.147 OA
+HETATM    5  N   UNL     1      -3.410  -8.240 -20.137 +0.00 -0.51    -0.101 NA
+HETATM    6  N   UNL     1      -3.293  -9.499 -19.908 +0.00 -1.64    -0.126 NA
+HETATM    7  H   UNL     1      -4.889  -8.529 -17.434 -1.97 +0.92    +0.171 HD
+ENDROOT
+BRANCH   1   8
+HETATM    8  C   UNL     1      -3.973 -11.148 -18.166 -5.07 +0.09    +0.104 A 
+HETATM    9  N   UNL     1      -3.637 -12.219 -18.877 +0.00 -0.63    -0.257 NA
+HETATM   10  C   UNL     1      -3.704 -13.432 -18.370 -9.70 -0.75    +0.117 A 
+HETATM   11  C   UNL     1      -4.129 -13.637 -17.070 -5.01 +0.04    +0.019 A 
+HETATM   12  C   UNL     1      -4.490 -12.545 -16.291 -5.34 +0.00    +0.004 A 
+HETATM   13  C   UNL     1      -4.411 -11.281 -16.848 -6.56 -0.07    +0.036 A 
+ENDBRANCH   1   8
+TORSDOF 1
+TER
+ENDMDL

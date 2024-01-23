@@ -1,0 +1,44 @@
+MODEL        28
+USER    Run = 28
+USER
+USER    Estimated Free Energy of Binding    = -32.82 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -33.41 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -10.08 kcal/mol
+USER        Electrostatic Energy            = -23.34 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -33.41 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -1.67 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.60 kcal/mol
+USER    (4) Unbound System's Energy         =  -1.67 kcal/mol
+USER
+USER
+REMARK  2 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_5 
+REMARK    2  A    between atoms: C_6  and  C_9 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNK     1      -3.635 -12.649 -15.910 +0.00 +0.63    +0.255 C 
+HETATM    2  C   UNK     1      -3.836 -13.284 -18.315 +0.00 -0.35    +0.296 C 
+HETATM    3  C   UNK     1      -2.924 -12.039 -18.517 +0.00 +0.40    +0.120 C 
+HETATM    4  S   UNK     1      -3.313 -11.155 -16.940 +0.00 -0.37    -0.133 SA
+HETATM    5  N   UNK     1      -3.823 -13.761 -16.904 +0.00 -0.11    -0.047 N 
+HETATM    6  H   UNK     1      -4.717 -14.228 -16.707 +0.00 +0.80    +0.279 HD
+HETATM    7  H   UNK     1      -3.055 -14.433 -16.792 +0.00 +0.93    +0.279 HD
+ENDROOT
+BRANCH   1   8
+HETATM    8  C   UNK     1      -4.903 -12.464 -15.072 +0.00 -0.11    -0.014 C 
+HETATM    9  C   UNK     1      -4.695 -11.319 -14.080 +0.00 +0.03    +0.017 C 
+HETATM   10  C   UNK     1      -6.079 -12.134 -15.994 +0.00 +0.04    +0.017 C 
+HETATM   11  C   UNK     1      -5.201 -13.755 -14.307 +0.00 +0.05    +0.017 C 
+ENDBRANCH   1   8
+BRANCH   2  12
+HETATM   12  C   UNK     1      -3.343 -14.408 -19.188 +0.00 +2.26    +0.205 C 
+HETATM   13  O   UNK     1      -2.953 -14.177 -20.308 -4.76-12.51    -0.646 OA
+HETATM   14  O   UNK     1      -3.331 -15.666 -18.719 -5.32-15.04    -0.646 OA
+ENDBRANCH   2  12
+TORSDOF 2
+TER
+ENDMDL

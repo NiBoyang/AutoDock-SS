@@ -1,0 +1,41 @@
+MODEL        2
+USER    Run = 2
+USER
+USER    Estimated Free Energy of Binding    = -47.91 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -48.21 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -44.69 kcal/mol
+USER        Electrostatic Energy            =  -3.52 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -48.21 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.11 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.30 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.11 kcal/mol
+USER
+USER
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_6  and  C_7 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -4.461 -11.390 -16.640 -5.11 +0.00    +0.019 A 
+HETATM    2  C   UNL     1      -4.494 -12.681 -16.200 -5.94 -0.01    +0.037 A 
+HETATM    3  C   UNL     1      -4.120 -13.723 -17.058 -5.04 +0.23    +0.112 A 
+HETATM    4  C   UNL     1      -3.711 -13.420 -18.368 -9.79 -0.78    +0.119 A 
+HETATM    5  C   UNL     1      -3.684 -12.097 -18.798 -5.43 +0.12    +0.052 A 
+HETATM    6  C   UNL     1      -4.057 -11.092 -17.935 -5.12 +0.03    +0.050 A 
+HETATM    7  N   UNL     1      -3.410 -14.623 -18.962 -4.91 -0.87    -0.084 N 
+HETATM    8  N   UNL     1      -3.645 -15.612 -17.996 +0.00 -0.27    -0.036 NA
+HETATM    9  N   UNL     1      -4.054 -15.061 -16.908 +0.00 -0.46    -0.128 NA
+HETATM   10  O   UNL     1      -2.954 -14.824 -20.287 -3.35 -0.69    -0.060 OA
+ENDROOT
+BRANCH   6  11
+HETATM   11  C   UNL     1      -4.028  -9.658 -18.399 +0.00 +3.35    +0.417 C 
+HETATM   12  F   UNL     1      -5.323  -9.249 -18.732 +0.00 -0.88    -0.166 F 
+HETATM   13  F   UNL     1      -3.532  -8.847 -17.373 +0.00 -0.88    -0.166 F 
+HETATM   14  F   UNL     1      -3.201  -9.549 -19.522 +0.00 -2.41    -0.166 F 
+ENDBRANCH   6  11
+TORSDOF 1
+TER
+ENDMDL

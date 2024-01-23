@@ -1,0 +1,75 @@
+MODEL        12
+USER    Run = 12
+USER
+USER    Estimated Free Energy of Binding    = -51.27 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -53.06 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -44.06 kcal/mol
+USER        Electrostatic Energy            =  -9.00 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -53.06 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.02 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.79 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.02 kcal/mol
+USER
+USER
+REMARK  6 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_2  and  C_3 
+REMARK    2  A    between atoms: C_8  and  C_9 
+REMARK    3  A    between atoms: C_18  and  S_20 
+REMARK    4  A    between atoms: S_20  and  C_21 
+REMARK    5  A    between atoms: C_21  and  C_22 
+REMARK       I    between atoms: C_22  and  N_24 
+REMARK    6  A    between atoms: N_24  and  C_25 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -7.589  -6.418 -18.929 +0.00 +0.36    +0.167 A 
+HETATM    2  N   UNL     1      -6.860  -6.996 -19.874 +0.00 -0.52    -0.209 NA
+HETATM    3  C   UNL     1      -5.759  -7.680 -19.547 +0.00 +0.55    +0.159 A 
+HETATM    4  C   UNL     1      -4.815  -8.374 -20.293 +0.00 +0.53    +0.128 A 
+HETATM    5  C   UNL     1      -3.876  -8.902 -19.406 +0.00 +1.93    +0.264 A 
+HETATM    6  O   UNL     1      -2.903  -9.572 -19.712 -4.08 -3.99    -0.267 OA
+HETATM    7  N   UNL     1      -4.227  -8.549 -18.153 -1.90 -3.23    -0.256 N 
+HETATM    8  H   UNL     1      -3.748  -8.782 -17.343 -1.47 +1.05    +0.191 HD
+HETATM    9  N   UNL     1      -5.398  -7.786 -18.220 +0.00 -0.90    -0.211 N 
+HETATM   10  C   UNL     1      -6.171  -7.184 -17.270 +0.00 +0.53    +0.192 A 
+HETATM   11  N   UNL     1      -7.250  -6.512 -17.640 +0.00 -0.45    -0.202 NA
+ENDROOT
+BRANCH  10  12
+HETATM   12  S   UNL     1      -5.739  -7.300 -15.567 +0.00 -0.19    -0.081 SA
+BRANCH  12  13
+HETATM   13  C   UNL     1      -6.674  -8.780 -15.105 +0.00 +0.42    +0.185 C 
+BRANCH  13  14
+HETATM   14  C   UNL     1      -6.219  -9.945 -15.946 +0.00 +0.68    +0.232 C 
+HETATM   15  O   UNL     1      -7.038 -10.686 -16.449 +0.00 -0.69    -0.272 OA
+HETATM   16  N   UNL     1      -4.904 -10.165 -16.140 +0.00 -3.26    -0.324 N 
+HETATM   17  H   UNL     1      -4.252  -9.538 -15.791 -2.41 +0.67    +0.169 HD
+BRANCH  16  18
+HETATM   18  C   UNL     1      -4.479 -11.300 -16.842 -6.48 -0.13    +0.073 A 
+HETATM   19  C   UNL     1      -4.480 -12.544 -16.221 -5.58 +0.00    +0.143 A 
+HETATM   20  C   UNL     1      -4.060 -13.662 -16.920 -5.16 +0.08    +0.044 A 
+HETATM   21  F   UNL     1      -4.892 -12.661 -14.940 +0.00 -2.50    -0.204 F 
+HETATM   22  C   UNL     1      -3.639 -13.542 -18.231 -6.25 -0.00    +0.003 A 
+HETATM   23  C   UNL     1      -3.637 -12.305 -18.849 -5.54 +0.00    +0.002 A 
+HETATM   24  C   UNL     1      -4.061 -11.184 -18.161 -5.19 +0.02    +0.033 A 
+ENDBRANCH  16  18
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+ENDBRANCH  10  12
+BRANCH   1  25
+HETATM   25  C   UNL     1      -8.801  -5.659 -19.308 +0.00 +0.08    +0.045 A 
+HETATM   26  C   UNL     1      -8.797  -4.259 -19.264 +0.00 +0.12    +0.082 A 
+HETATM   27  C   UNL     1      -9.942  -3.558 -19.614 +0.00 +0.05    +0.038 A 
+HETATM   28  C   UNL     1     -11.075  -4.238 -20.016 +0.00 +0.00    +0.003 A 
+HETATM   29  C   UNL     1     -11.081  -5.622 -20.060 +0.00 +0.00    +0.001 A 
+HETATM   30  C   UNL     1      -9.955  -6.334 -19.710 +0.00 +0.03    +0.018 A 
+BRANCH  26  31
+HETATM   31  O   UNL     1      -7.682  -3.592 -18.874 +0.00 -0.55    -0.355 OA
+HETATM   32  C   UNL     1      -7.847  -2.232 -18.473 +0.00 +0.28    +0.210 C 
+ENDBRANCH  26  31
+ENDBRANCH   1  25
+TORSDOF 6
+TER
+ENDMDL

@@ -1,0 +1,57 @@
+MODEL        66
+USER    Run = 66
+USER
+USER    Estimated Free Energy of Binding    = -42.15 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -43.35 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -16.89 kcal/mol
+USER        Electrostatic Energy            = -26.45 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -43.35 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -1.54 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.19 kcal/mol
+USER    (4) Unbound System's Energy         =  -1.54 kcal/mol
+USER
+USER
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK       I    between atoms: N_7  and  C_8 
+REMARK       I    between atoms: C_8  and  N_10 
+REMARK    1  A    between atoms: N_10  and  CA_11 
+REMARK    2  A    between atoms: CA_11  and  CB_12 
+REMARK    3  A    between atoms: CA_11  and  C_16 
+REMARK    4  A    between atoms: CB_12  and  CG_13 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNK A   0      -3.586  -8.710 -16.545 +0.00 +0.12    +0.034 C 
+HETATM    2  C   UNK A   0      -3.800  -8.446 -18.037 +0.00 +0.88    +0.108 C 
+HETATM    3  C   UNK A   0      -2.697  -7.520 -18.561 +0.00 +0.77    +0.192 C 
+HETATM    4  O   UNK A   0      -2.795  -7.429 -19.985 +0.00 -1.46    -0.388 OA
+HETATM    5  C   UNK A   0      -2.596  -8.671 -20.665 +0.00 +0.87    +0.187 C 
+HETATM    6  C   UNK A   0      -3.694  -9.657 -20.248 +0.00 +1.10    +0.154 C 
+HETATM    7  N   UNK A   0      -3.732  -9.716 -18.779 -5.69 -3.73    -0.326 N 
+HETATM    8  C   UNK A   0      -3.705 -10.897 -18.130 +0.00 +0.64    +0.319 C 
+HETATM    9  O   UNK A   0      -3.835 -10.931 -16.922 -1.21 -0.60    -0.247 OA
+ATOM     10  N   LEU A   1      -3.534 -12.041 -18.822 +0.00 -0.88    -0.328 N 
+ATOM     11  H   LEU A   1      -3.357 -12.010 -19.775 +0.00 +0.67    +0.165 HD
+ENDROOT
+BRANCH  10  12
+ATOM     12  CA  LEU A   1      -3.616 -13.333 -18.134 +0.00 +0.03    +0.187 C 
+BRANCH  12  13
+ATOM     13  CB  LEU A   1      -5.032 -13.530 -17.589 +0.00 +0.11    +0.040 C 
+BRANCH  13  14
+ATOM     14  CG  LEU A   1      -6.047 -12.975 -18.591 +0.00 -0.06    -0.020 C 
+ATOM     15  CD1 LEU A   1      -6.996 -14.092 -19.027 +0.00 +0.02    +0.009 C 
+ATOM     16  CD2 LEU A   1      -6.850 -11.851 -17.934 +0.00 +0.02    +0.009 C 
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+BRANCH  12  17
+ATOM     17  C   LEU A   1      -3.293 -14.439 -19.104 +0.00 +2.27    +0.196 C 
+ATOM     18  O   LEU A   1      -2.969 -14.172 -20.249 -4.98-13.39    -0.646 OA
+ATOM     19  OXT LEU A   1      -3.353 -15.603 -18.743 -5.01-13.85    -0.646 OA
+ENDBRANCH  12  17
+ENDBRANCH  10  12
+TORSDOF 4
+TER
+ENDMDL

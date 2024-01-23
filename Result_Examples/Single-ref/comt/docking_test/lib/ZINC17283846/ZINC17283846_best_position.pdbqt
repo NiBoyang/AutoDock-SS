@@ -1,0 +1,38 @@
+MODEL        87
+USER    Run = 87
+USER
+USER    Estimated Free Energy of Binding    = -41.52 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -41.52 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -31.66 kcal/mol
+USER        Electrostatic Energy            =  -9.86 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -41.52 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.00 kcal/mol
+USER    (4) Unbound System's Energy         =  +0.00 kcal/mol
+USER
+USER
+REMARK  0 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -4.396 -11.242 -16.884 -6.69 -0.37    +0.180 A 
+HETATM    2  C   UNL     1      -4.461 -12.605 -16.343 -5.41 +0.05    +0.191 A 
+HETATM    3  N   UNL     1      -4.110 -13.633 -17.129 +0.00 -0.38    -0.184 NA
+HETATM    4  C   UNL     1      -3.714 -13.425 -18.362 -9.78 -1.83    +0.281 A 
+HETATM    5  O   UNL     1      -3.370 -14.489 -19.117 -2.41 -1.87    -0.149 OA
+HETATM    6  N   UNL     1      -3.635 -12.185 -18.914 +0.00 -0.75    -0.295 N 
+HETATM    7  H   UNL     1      -3.336 -12.093 -19.833 +0.00 +0.70    +0.171 HD
+HETATM    8  C   UNL     1      -3.965 -11.077 -18.210 -4.91 +0.26    +0.216 A 
+HETATM    9  O   UNL     1      -3.889  -9.854 -18.766 -2.46 -1.53    -0.169 OA
+HETATM   10  N   UNL     1      -4.869 -12.763 -15.086 +0.00 -2.04    -0.195 NA
+HETATM   11  C   UNL     1      -5.200 -11.683 -14.377 +0.00 -0.29    +0.242 A 
+HETATM   12  S   UNL     1      -5.726 -11.879 -12.760 +0.00 -0.06    -0.035 SA
+HETATM   13  N   UNL     1      -5.133 -10.445 -14.893 +0.00 -0.35    -0.117 NA
+HETATM   14  N   UNL     1      -4.751 -10.219 -16.104 +0.00 -1.39    -0.139 NA
+ENDROOT
+TORSDOF 0
+TER
+ENDMDL

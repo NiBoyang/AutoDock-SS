@@ -1,0 +1,57 @@
+
+# AVS field file
+#
+# AutoDock Atomic Affinity and Electrostatic Grids
+#
+# Created by ./../autogrid4.
+#
+#SPACING 0.375
+#NELEMENTS 58 56 54
+#CENTER -4.081  -11.923 -17.615
+#MACROMOLECULE ZINC000000002212_receptor.pdbqt
+#GRID_PARAMETER_FILE D:\AutoDock_Workplace\script test\..\scripttest.gpf
+#
+ndim=3			# number of dimensions in the field
+dim1=59			# number of x-elements
+dim2=57			# number of y-elements
+dim3=55			# number of z-elements
+nspace=3		# number of physical coordinates per point
+veclen=9		# number of affinity values at each point
+data=float		# data type (byte, integer, float, double)
+field=uniform		# field type (uniform, rectilinear, irregular)
+coord 1 file=ligand.maps.xyz filetype=ascii offset=0
+coord 2 file=ligand.maps.xyz filetype=ascii offset=2
+coord 3 file=ligand.maps.xyz filetype=ascii offset=4
+label=A-affinity	# component label for variable 1
+label=C-affinity	# component label for variable 2
+label=HD-affinity	# component label for variable 3
+label=N-affinity	# component label for variable 4
+label=NA-affinity	# component label for variable 5
+label=OA-affinity	# component label for variable 6
+label=F-affinity
+label=P-affinity
+label=SA-affinity
+label=S-affinity
+label=Cl-affinity
+label=Br-affinity
+label=I-affinity
+label=Electrostatics
+label=Desolvation
+#
+# location of affinity grid files and how to read them
+#
+variable 1 file=comt_lig.A.map filetype=ascii skip=6
+variable 2 file=comt_lig.C.map filetype=ascii skip=6
+variable 3 file=comt_lig.HD.map filetype=ascii skip=6
+variable 4 file=comt_lig.N.map filetype=ascii skip=6
+variable 5 file=comt_lig.NA.map filetype=ascii skip=6
+variable 6 file=comt_lig.OA.map filetype=ascii skip=6
+variable 7 file=comt_lig.F.map filetype=ascii skip=6
+variable 8 file=comt_lig.P.map filetype=ascii skip=6
+variable 9 file=comt_lig.SA.map filetype=ascii skip=6
+variable 10 file=comt_lig.S.map filetype=ascii skip=6
+variable 11 file=comt_lig.Cl.map filetype=ascii skip=6
+variable 12 file=comt_lig.Br.map filetype=ascii skip=6
+variable 13 file=comt_lig.I.map filetype=ascii skip=6
+variable 14 file=comt_lig.e.map filetype=ascii skip=6
+variable 15 file=comt_lig.d.map filetype=ascii skip=6

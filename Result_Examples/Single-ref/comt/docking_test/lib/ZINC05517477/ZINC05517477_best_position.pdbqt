@@ -1,0 +1,73 @@
+MODEL        98
+USER    Run = 98
+USER
+USER    Estimated Free Energy of Binding    = -57.50 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -58.99 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -51.72 kcal/mol
+USER        Electrostatic Energy            =  -7.27 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -58.99 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -1.03 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.49 kcal/mol
+USER    (4) Unbound System's Energy         =  -1.03 kcal/mol
+USER
+USER
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_22 
+REMARK    2  A    between atoms: N_5  and  C_9 
+REMARK    3  A    between atoms: C_9  and  C_10 
+REMARK       I    between atoms: C_10  and  N_12 
+REMARK    4  A    between atoms: N_12  and  C_13 
+REMARK    5  A    between atoms: C_25  and  C_28 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -3.627 -19.362 -17.464 +0.00 +0.12    +0.054 C 
+HETATM    2  C   UNL     1      -4.007 -18.494 -18.665 +0.00 +0.38    +0.140 A 
+HETATM    3  C   UNL     1      -3.275 -17.167 -18.618 +0.00 +1.12    +0.261 A 
+HETATM    4  O   UNL     1      -3.354 -16.318 -17.756 -2.14 -1.42    -0.270 OA
+HETATM    5  N   UNL     1      -2.516 -17.128 -19.731 +0.00 -0.99    -0.259 N 
+HETATM    6  C   UNL     1      -2.667 -18.235 -20.469 +0.00 +0.89    +0.326 A 
+HETATM    7  O   UNL     1      -2.086 -18.431 -21.518 +0.00 -0.58    -0.247 OA
+HETATM    8  N   UNL     1      -3.531 -19.106 -19.918 +0.00 -0.76    -0.321 N 
+HETATM    9  H   UNL     1      -3.792 -19.969 -20.276 +0.00 +0.33    +0.165 HD
+ENDROOT
+BRANCH   5  10
+HETATM   10  C   UNL     1      -1.638 -16.013 -20.091 +0.00 +0.98    +0.240 C 
+BRANCH  10  11
+HETATM   11  C   UNL     1      -2.047 -14.784 -19.320 +0.00 +1.35    +0.240 C 
+HETATM   12  O   UNL     1      -1.201 -14.033 -18.882 +0.00 -1.05    -0.271 OA
+HETATM   13  N   UNL     1      -3.353 -14.519 -19.116 -6.67 -4.32    -0.326 N 
+HETATM   14  H   UNL     1      -4.030 -15.081 -19.523 +0.00 +1.17    +0.169 HD
+BRANCH  13  15
+HETATM   15  C   UNL     1      -3.731 -13.431 -18.318 -8.89 -0.19    +0.037 A 
+HETATM   16  C   UNL     1      -3.661 -12.141 -18.825 -5.40 +0.16    +0.069 A 
+HETATM   17  C   UNL     1      -4.040 -11.067 -18.037 -5.23 +0.07    +0.107 A 
+HETATM   18  C   UNL     1      -4.479 -11.283 -16.733 -6.06 -0.11    +0.105 A 
+HETATM   19  O   UNL     1      -4.071  -9.726 -18.292 -2.26 -2.37    -0.323 OA
+HETATM   20  C   UNL     1      -4.542 -12.572 -16.229 -5.42 +0.01    +0.042 A 
+HETATM   21  O   UNL     1      -4.787 -10.077 -16.171 -4.66 -3.65    -0.323 OA
+HETATM   22  C   UNL     1      -4.170 -13.644 -17.018 -5.00 +0.06    +0.032 A 
+HETATM   23  C   UNL     1      -4.920  -9.161 -17.274 +0.00 +1.55    +0.352 C 
+ENDBRANCH  13  15
+ENDBRANCH  10  11
+ENDBRANCH   5  10
+BRANCH   2  24
+HETATM   24  C   UNL     1      -5.497 -18.279 -18.712 +0.00 -0.05    -0.021 A 
+HETATM   25  C   UNL     1      -6.355 -19.313 -18.385 +0.00 +0.02    +0.011 A 
+HETATM   26  C   UNL     1      -7.723 -19.114 -18.423 +0.00 +0.01    +0.008 A 
+HETATM   27  C   UNL     1      -8.233 -17.885 -18.798 +0.00 -0.10    -0.051 A 
+HETATM   28  C   UNL     1      -7.375 -16.853 -19.131 +0.00 +0.02    +0.008 A 
+HETATM   29  C   UNL     1      -6.008 -17.050 -19.088 +0.00 +0.03    +0.011 A 
+BRANCH  27  30
+HETATM   30  C   UNL     1      -9.724 -17.670 -18.844 +0.00 -0.04    -0.024 C 
+HETATM   31  C   UNL     1     -10.438 -18.958 -18.430 +0.00 +0.03    +0.019 C 
+HETATM   32  C   UNL     1     -10.106 -16.544 -17.882 +0.00 +0.03    +0.019 C 
+HETATM   33  C   UNL     1     -10.140 -17.290 -20.266 +0.00 +0.03    +0.019 C 
+ENDBRANCH  27  30
+ENDBRANCH   2  24
+TORSDOF 5
+TER
+ENDMDL

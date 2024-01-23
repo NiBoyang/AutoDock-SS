@@ -1,0 +1,44 @@
+MODEL        11
+USER    Run = 11
+USER
+USER    Estimated Free Energy of Binding    = -36.54 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -37.44 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -10.37 kcal/mol
+USER        Electrostatic Energy            = -27.06 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -37.44 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.43 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.89 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.43 kcal/mol
+USER
+USER
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_4 
+REMARK    2  A    between atoms: C_2  and  O_7 
+REMARK    3  A    between atoms: O_7  and  C_8 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -3.720 -16.014 -22.233 +0.00 +0.18    +0.057 C 
+HETATM    2  C   UNL     1      -3.051 -16.492 -20.943 +0.00 +0.55    +0.141 C 
+HETATM    3  C   UNL     1      -1.587 -16.836 -21.224 +0.00 +0.17    +0.057 C 
+ENDROOT
+BRANCH   2   4
+HETATM    4  C   UNL     1      -3.120 -15.400 -19.906 +0.00 +1.49    +0.208 C 
+HETATM    5  O   UNL     1      -2.956 -14.237 -20.235 -4.98-13.40    -0.646 OA
+HETATM    6  O   UNL     1      -3.337 -15.680 -18.740 -5.39-15.37    -0.646 OA
+ENDBRANCH   2   4
+BRANCH   2   7
+HETATM    7  O   UNL     1      -3.729 -17.653 -20.457 +0.00 -1.16    -0.365 OA
+BRANCH   7   8
+HETATM    8  C   UNL     1      -2.859 -18.651 -19.920 +0.00 +0.32    +0.123 C 
+HETATM    9  C   UNL     1      -3.242 -19.102 -18.500 +0.00 +0.08    +0.032 C 
+HETATM   10  C   UNL     1      -2.889 -20.532 -18.944 +0.00 +0.01    +0.005 C 
+HETATM   11  C   UNL     1      -3.200 -20.079 -20.381 +0.00 +0.06    +0.032 C 
+ENDBRANCH   7   8
+ENDBRANCH   2   7
+TORSDOF 3
+TER
+ENDMDL

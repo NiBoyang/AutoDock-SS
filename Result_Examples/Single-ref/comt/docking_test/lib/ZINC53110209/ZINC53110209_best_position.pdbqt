@@ -1,0 +1,190 @@
+MODEL        100
+USER    Run = 100
+USER
+USER    Estimated Free Energy of Binding    = -84.46 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -85.95 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -54.93 kcal/mol
+USER        Electrostatic Energy            = -31.02 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -85.95 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.34 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.49 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.34 kcal/mol
+USER
+USER
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_6  and  C_8 
+REMARK    2  A    between atoms: C_6  and  N_10 
+REMARK    3  A    between atoms: C_8  and  O_9 
+REMARK    4  A    between atoms: N_10  and  C_11 
+REMARK    5  A    between atoms: C_14  and  N_17 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  N   UNL     1      -4.863 -10.185 -16.034 +0.00 -3.76    -0.363 N 
+HETATM    2  H   UNL     1      -4.352  -9.939 -15.247 -1.33 +0.64    +0.162 HD
+ENDROOT
+BRANCH   1   3
+HETATM    3  C   UNL     1      -6.040  -9.400 -16.418 +0.00 +0.16    +0.053 C 
+HETATM    4  C   UNL     1      -7.229 -10.338 -16.637 +0.00 +0.08    +0.033 C 
+HETATM    5  C   UNL     1      -7.523 -11.099 -15.342 +0.00 +0.01    +0.003 C 
+HETATM    6  C   UNL     1      -7.856 -10.103 -14.229 +0.00 +0.01    +0.004 C 
+HETATM    7  C   UNL     1      -6.667  -9.165 -14.011 +0.00 -0.03    -0.016 C 
+HETATM    8  C   UNL     1      -7.001  -8.169 -12.899 +0.00 +0.02    +0.010 C 
+HETATM    9  C   UNL     1      -6.373  -8.404 -15.305 +0.00 +0.09    +0.037 C 
+BRANCH   3  10
+HETATM   10  C   UNL     1      -5.745  -8.639 -17.713 +0.00 +0.80    +0.195 C 
+BRANCH  10  11
+HETATM   11  O   UNL     1      -4.397  -8.885 -18.113 -4.19 -6.01    -0.398 OA
+HETATM   12  H   UNL     1      -3.918  -9.492 -17.530 -1.96 +1.17    +0.209 HD
+ENDBRANCH  10  11
+ENDBRANCH   3  10
+ENDBRANCH   1   3
+BRANCH   1  13
+HETATM   13  C   UNL     1      -4.479 -11.281 -16.797 -6.39 -0.20    +0.123 A 
+HETATM   14  N   UNL     1      -4.124 -11.110 -18.061 +0.00 -0.17    -0.241 NA
+HETATM   15  C   UNL     1      -3.750 -12.123 -18.819 -5.32 +0.37    +0.155 A 
+HETATM   16  C   UNL     1      -3.727 -13.409 -18.318 -8.87 -0.61    +0.120 A 
+HETATM   17  C   UNL     1      -4.098 -13.634 -16.999 -5.13 +0.08    +0.041 A 
+HETATM   18  C   UNL     1      -4.480 -12.551 -16.228 -5.58 +0.00    +0.052 A 
+BRANCH  16  19
+HETATM   19  N   UNL     1      -3.310 -14.539 -19.180 -6.24 -1.46    -0.114 N 
+HETATM   20  O   UNL     1      -2.959 -14.334 -20.318 -4.61 -9.80    -0.532 OA
+HETATM   21  O   UNL     1      -3.319 -15.667 -18.745 -5.31-12.40    -0.532 OA
+ENDBRANCH  16  19
+ENDBRANCH   1  13
+TORSDOF 5
+TER
+ENDMDL
+________________________________________________________________________________
+
+
+    CLUSTERING HISTOGRAM
+    ____________________
+
+
+________________________________________________________________________________
+     |           |     |           |     |
+Clus | Lowest    | Run | Mean      | Num | Histogram
+-ter | Binding   |     | Binding   | in  |
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |    -84.46 | 100 |    -81.25 |  54 |######################################################
+   2 |    -83.14 |  39 |    -80.19 |  46 |##############################################
+_____|___________|_____|___________|_____|______________________________________
+
+
+    RMSD TABLE
+    __________
+
+
+_______________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1    100      -84.46      0.00     20.66           RANKING
+   1      2     69      -84.21      0.13     20.61           RANKING
+   1      3      1      -84.01      0.15     20.70           RANKING
+   1      4     34      -83.63      0.55     20.64           RANKING
+   1      5      6      -83.60      0.15     20.66           RANKING
+   1      6     26      -83.10      0.18     20.70           RANKING
+   1      7     29      -83.10      1.48     20.89           RANKING
+   1      8     94      -83.09      0.26     20.66           RANKING
+   1      9     15      -83.06      1.57     20.47           RANKING
+   1     10     35      -83.02      0.15     20.75           RANKING
+   1     11     61      -82.61      0.50     20.81           RANKING
+   1     12     11      -82.61      0.39     20.58           RANKING
+   1     13     33      -82.49      0.26     20.58           RANKING
+   1     14     57      -82.22      0.30     20.69           RANKING
+   1     15     92      -82.16      0.21     20.64           RANKING
+   1     16     62      -82.15      1.45     20.96           RANKING
+   1     17     80      -81.99      0.34     20.66           RANKING
+   1     18     41      -81.95      0.19     20.64           RANKING
+   1     19     60      -81.70      0.23     20.64           RANKING
+   1     20     76      -81.67      1.39     20.89           RANKING
+   1     21     70      -81.63      1.51     20.97           RANKING
+   1     22     88      -81.52      1.93     20.14           RANKING
+   1     23      4      -81.47      1.60     20.91           RANKING
+   1     24     24      -81.36      0.56     20.83           RANKING
+   1     25     28      -81.30      1.58     20.93           RANKING
+   1     26     68      -81.29      0.38     20.70           RANKING
+   1     27     73      -81.15      0.39     20.77           RANKING
+   1     28     85      -81.07      1.98     20.09           RANKING
+   1     29     81      -81.05      0.55     20.55           RANKING
+   1     30     64      -81.04      0.40     20.60           RANKING
+   1     31     48      -80.99      0.18     20.59           RANKING
+   1     32     30      -80.94      1.50     20.64           RANKING
+   1     33     71      -80.90      1.43     20.77           RANKING
+   1     34     75      -80.85      0.15     20.63           RANKING
+   1     35     27      -80.81      0.22     20.69           RANKING
+   1     36     46      -80.71      1.42     20.82           RANKING
+   1     37     65      -80.55      1.53     20.73           RANKING
+   1     38     55      -80.42      0.38     20.61           RANKING
+   1     39      3      -80.36      0.46     20.55           RANKING
+   1     40     56      -79.93      1.53     20.87           RANKING
+   1     41     77      -79.87      1.49     20.69           RANKING
+   1     42     84      -79.84      0.22     20.63           RANKING
+   1     43     49      -79.79      1.49     20.94           RANKING
+   1     44     36      -79.69      1.41     20.79           RANKING
+   1     45     37      -79.64      0.25     20.61           RANKING
+   1     46     66      -79.62      0.32     20.67           RANKING
+   1     47     10      -79.62      0.34     20.65           RANKING
+   1     48      2      -79.48      0.42     20.74           RANKING
+   1     49     44      -79.41      0.42     20.77           RANKING
+   1     50     31      -79.13      1.51     20.78           RANKING
+   1     51     99      -78.98      0.33     20.58           RANKING
+   1     52     83      -78.95      1.99     20.09           RANKING
+   1     53     45      -78.57      1.74     20.59           RANKING
+   1     54     16      -78.50      1.65     20.83           RANKING
+   2      1     39      -83.14      0.00     20.19           RANKING
+   2      2     97      -82.12      0.59     20.25           RANKING
+   2      3     47      -81.99      0.58     20.26           RANKING
+   2      4     21      -81.97      1.80     19.89           RANKING
+   2      5     89      -81.97      0.42     20.18           RANKING
+   2      6      7      -81.88      0.42     20.09           RANKING
+   2      7     96      -81.87      1.52     19.89           RANKING
+   2      8     87      -81.62      0.37     20.10           RANKING
+   2      9     63      -81.42      1.60     19.95           RANKING
+   2     10      8      -81.18      0.74     20.15           RANKING
+   2     11     82      -81.18      0.43     20.25           RANKING
+   2     12      5      -80.97      0.57     20.20           RANKING
+   2     13     40      -80.96      0.48     20.07           RANKING
+   2     14     18      -80.94      0.40     20.12           RANKING
+   2     15     20      -80.94      0.48     20.20           RANKING
+   2     16     90      -80.88      0.58     20.12           RANKING
+   2     17     12      -80.76      0.34     20.16           RANKING
+   2     18     14      -80.69      0.46     20.10           RANKING
+   2     19     25      -80.53      0.49     20.10           RANKING
+   2     20     13      -80.46      0.38     20.15           RANKING
+   2     21     67      -80.40      0.29     20.17           RANKING
+   2     22     58      -80.29      0.57     20.17           RANKING
+   2     23     17      -80.23      0.56     20.23           RANKING
+   2     24     91      -80.07      0.42     20.12           RANKING
+   2     25     74      -79.99      0.56     20.24           RANKING
+   2     26     78      -79.97      0.46     20.11           RANKING
+   2     27     50      -79.68      0.71     20.30           RANKING
+   2     28     98      -79.59      0.32     20.19           RANKING
+   2     29     72      -79.57      0.29     20.18           RANKING
+   2     30     51      -79.56      0.45     20.19           RANKING
+   2     31     54      -79.52      0.69     20.33           RANKING
+   2     32     93      -79.47      0.50     20.22           RANKING
+   2     33     59      -79.45      0.55     20.22           RANKING
+   2     34     32      -79.43      0.44     20.07           RANKING
+   2     35      9      -79.39      0.48     20.14           RANKING
+   2     36     23      -79.30      0.34     20.15           RANKING
+   2     37     95      -79.26      1.65     20.02           RANKING
+   2     38     38      -79.21      1.59     19.99           RANKING
+   2     39     86      -78.85      1.48     19.97           RANKING
+   2     40     53      -78.68      0.53     20.17           RANKING
+   2     41     43      -78.62      0.39     20.14           RANKING
+   2     42     79      -78.55      1.47     20.06           RANKING
+   2     43     42      -78.37      0.30     20.20           RANKING
+   2     44     22      -78.29      1.58     20.00           RANKING
+   2     45     52      -78.19      1.88     20.04           RANKING
+   2     46     19      -77.24      0.50     20.27           RANKING
+
+Run time 0.479 sec
+Idle time 0.000 sec

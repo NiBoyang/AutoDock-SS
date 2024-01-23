@@ -1,0 +1,38 @@
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_3 
+REMARK    2  A    between atoms: C_2  and  N_6 
+REMARK       I    between atoms: N_6  and  C_8 
+REMARK       I    between atoms: C_8  and  N_10 
+REMARK       I    between atoms: N_10  and  C_11 
+REMARK    3  A    between atoms: C_11  and  C_13 
+REMARK    4  A    between atoms: C_14  and  C_15 
+ROOT
+HETATM    1  N   UNL     1      -1.461  -0.992   0.526  1.00  0.00    -0.334 N 
+HETATM    2  C   UNL     1      -2.485  -0.675  -0.472  1.00  0.00     0.155 C 
+HETATM    3  C   UNL     1      -1.646  -2.020   1.379  1.00  0.00     0.325 C 
+HETATM    4  O   UNL     1      -0.796  -2.283   2.207  1.00  0.00    -0.247 OA
+HETATM    5  N   UNL     1      -2.773  -2.756   1.312  1.00  0.00    -0.276 N 
+HETATM    6  C   UNL     1      -2.958  -3.784   2.164  1.00  0.00     0.249 C 
+HETATM    7  O   UNL     1      -2.109  -4.046   2.992  1.00  0.00    -0.268 OA
+HETATM    8  H   UNL     1      -3.451  -2.546   0.651  1.00  0.00     0.173 HD
+ENDROOT
+BRANCH   1   9
+HETATM    9  C   UNL     1      -0.235  -0.192   0.599  1.00  0.00     0.087 C 
+HETATM   10  C   UNL     1      -0.585   1.241   1.005  1.00  0.00     0.033 C 
+BRANCH   9  11
+HETATM   11  C   UNL     1       0.449  -0.182  -0.770  1.00  0.00    -0.000 C 
+HETATM   12  C   UNL     1       1.795   0.536  -0.661  1.00  0.00     0.011 C 
+HETATM   13  C   UNL     1       0.675  -1.621  -1.237  1.00  0.00     0.011 C 
+ENDBRANCH   9  11
+ENDBRANCH   1   9
+BRANCH   6  14
+HETATM   14  C   UNL     1      -4.194  -4.590   2.091  1.00  0.00     0.081 C 
+HETATM   15  C   UNL     1      -4.379  -5.614   2.940  1.00  0.00     0.090 C 
+BRANCH  15  16
+HETATM   16  C   UNL     1      -5.612  -6.420   2.867  1.00  0.00     0.198 C 
+HETATM   17  O   UNL     1      -6.467  -6.155   2.034  1.00  0.00    -0.645 OA
+HETATM   18  O   UNL     1      -5.780  -7.352   3.640  1.00  0.00    -0.645 OA
+ENDBRANCH  15  16
+ENDBRANCH   6  14
+TORSDOF 4

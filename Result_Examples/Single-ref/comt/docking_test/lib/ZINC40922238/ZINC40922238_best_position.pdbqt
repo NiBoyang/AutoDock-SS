@@ -1,0 +1,73 @@
+MODEL        23
+USER    Run = 23
+USER
+USER    Estimated Free Energy of Binding    = -45.83 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -47.32 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -44.49 kcal/mol
+USER        Electrostatic Energy            =  -2.83 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -47.32 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  +1.51 kcal/mol
+USER    (3) Torsional Free Energy           =  +1.49 kcal/mol
+USER    (4) Unbound System's Energy         =  +1.51 kcal/mol
+USER
+USER
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_5  and  N_9 
+REMARK       I    between atoms: N_9  and  C_10 
+REMARK    2  A    between atoms: C_10  and  C_12 
+REMARK    3  A    between atoms: C_20  and  C_21 
+REMARK    4  A    between atoms: C_24  and  O_27 
+REMARK    5  A    between atoms: O_27  and  C_28 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -3.900 -12.770 -21.202 +0.00 +0.25    +0.062 C 
+HETATM    2  C   UNL     1      -4.865 -12.405 -22.058 +0.00 +0.12    +0.037 C 
+HETATM    3  N   UNL     1      -5.304 -11.107 -22.159 +0.00 -0.56    -0.190 N 
+HETATM    4  C   UNL     1      -4.547 -10.128 -21.534 +0.00 +2.69    +0.745 A 
+HETATM    5  N   UNL     1      -4.585  -8.829 -21.627 +0.00 +0.22    +0.065 NA
+HETATM    6  N   UNL     1      -3.689  -8.299 -20.868 +0.00 -0.03    -0.008 NA
+HETATM    7  N   UNL     1      -3.028  -9.219 -20.242 +0.00 -0.23    -0.029 NA
+HETATM    8  N   UNL     1      -3.564 -10.439 -20.650 +0.00 -0.32    -0.064 N 
+HETATM    9  C   UNL     1      -3.223 -11.804 -20.265 +0.00 +0.86    +0.204 C 
+HETATM   10  C   UNL     1      -5.491 -13.455 -22.939 +0.00 +0.19    +0.070 C 
+HETATM   11  H   UNL     1      -6.111 -10.885 -22.649 +0.00 +0.47    +0.184 HD
+ENDROOT
+BRANCH   1  12
+HETATM   12  C   UNL     1      -3.501 -14.126 -21.174 +0.00 +1.50    +0.256 C 
+HETATM   13  N   UNL     1      -3.629 -14.889 -22.278 +0.00 -1.16    -0.323 N 
+HETATM   14  H   UNL     1      -3.941 -14.493 -23.107 +0.00 +0.49    +0.169 HD
+HETATM   15  O   UNL     1      -3.042 -14.606 -20.152 -4.05 -4.08    -0.267 OA
+BRANCH  13  16
+HETATM   16  C   UNL     1      -3.312 -16.250 -22.228 +0.00 +0.13    +0.041 A 
+HETATM   17  C   UNL     1      -2.038 -16.682 -22.572 +0.00 +0.08    +0.030 A 
+HETATM   18  C   UNL     1      -1.728 -18.027 -22.520 +0.00 +0.02    +0.009 A 
+HETATM   19  C   UNL     1      -2.686 -18.944 -22.128 +0.00 -0.13    -0.061 A 
+HETATM   20  C   UNL     1      -2.346 -20.411 -22.073 +0.00 +0.08    +0.048 C 
+HETATM   21  C   UNL     1      -3.958 -18.518 -21.790 +0.00 +0.03    +0.015 A 
+HETATM   22  C   UNL     1      -4.272 -17.173 -21.834 +0.00 -0.10    -0.035 A 
+HETATM   23  C   UNL     1      -5.656 -16.710 -21.460 +0.00 +0.14    +0.050 C 
+ENDBRANCH  13  16
+ENDBRANCH   1  12
+BRANCH   9  24
+HETATM   24  C   UNL     1      -3.686 -12.065 -18.855 -5.25 -0.07    -0.028 A 
+HETATM   25  C   UNL     1      -3.708 -13.357 -18.363 -8.92 -0.06    +0.012 A 
+HETATM   26  C   UNL     1      -4.126 -13.598 -17.069 -5.01 +0.07    +0.037 A 
+HETATM   27  C   UNL     1      -4.534 -12.543 -16.265 -5.28 +0.03    +0.069 A 
+HETATM   28  C   UNL     1      -4.516 -11.248 -16.762 -6.14 -0.05    +0.037 A 
+HETATM   29  C   UNL     1      -4.092 -11.012 -18.056 -5.13 +0.01    +0.012 A 
+BRANCH  27  30
+HETATM   30  O   UNL     1      -4.951 -12.778 -14.993 -4.72 -3.90    -0.347 OA
+BRANCH  30  31
+HETATM   31  C   UNL     1      -4.066 -12.394 -13.939 +0.00 +0.30    +0.120 C 
+HETATM   32  C   UNL     1      -2.619 -12.500 -14.425 +0.00 +0.10    +0.040 C 
+HETATM   33  C   UNL     1      -4.361 -10.951 -13.526 +0.00 +0.08    +0.040 C 
+ENDBRANCH  30  31
+ENDBRANCH  27  30
+ENDBRANCH   9  24
+TORSDOF 5
+TER
+ENDMDL

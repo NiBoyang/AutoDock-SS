@@ -1,0 +1,39 @@
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_2  and  C_3 
+REMARK       I    between atoms: N_2  and  C_6 
+REMARK    2  A    between atoms: C_3  and  C_4 
+REMARK    3  A    between atoms: C_4  and  O_5 
+REMARK    4  A    between atoms: C_6  and  C_8 
+REMARK    5  A    between atoms: C_12  and  C_13 
+ROOT
+HETATM    1  C   UNL     1      -0.027   0.185  -2.343  1.00  0.00     0.100 C 
+HETATM    2  C   UNL     1      -0.269  -0.799  -3.531  1.00  0.00     0.022 C 
+HETATM    3  C   UNL     1      -1.839  -0.893  -3.507  1.00  0.00     0.018 C 
+HETATM    4  C   UNL     1      -2.025   0.660  -3.670  1.00  0.00     0.024 C 
+HETATM    5  C   UNL     1      -1.213   1.176  -2.435  1.00  0.00     0.108 C 
+HETATM    6  C   UNL     1      -1.091   0.911  -4.860  1.00  0.00    -0.025 C 
+HETATM    7  C   UNL     1      -0.057   0.065  -4.780  1.00  0.00    -0.025 C 
+ENDROOT
+BRANCH   1   8
+HETATM    8  C   UNL     1      -0.055  -0.554  -1.030  1.00  0.00     0.225 C 
+HETATM    9  N   UNL     1       1.091  -1.023  -0.496  1.00  0.00    -0.354 N 
+HETATM   10  C   UNL     1       2.374  -0.717  -1.132  1.00  0.00     0.152 C 
+HETATM   11  O   UNL     1      -1.107  -0.726  -0.453  1.00  0.00    -0.273 OA
+BRANCH   9  12
+HETATM   12  C   UNL     1       1.052  -1.838   0.721  1.00  0.00     0.151 C 
+BRANCH  12  13
+HETATM   13  C   UNL     1       1.153  -0.929   1.947  1.00  0.00     0.183 C 
+BRANCH  13  14
+HETATM   14  O   UNL     1      -0.003  -0.092   2.016  1.00  0.00    -0.399 OA
+HETATM   15  H   UNL     1      -0.007   0.512   2.771  1.00  0.00     0.209 HD
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+ENDBRANCH   9  12
+ENDBRANCH   1   8
+BRANCH   5  16
+HETATM   16  C   UNL     1      -0.715   2.578  -2.673  1.00  0.00     0.178 C 
+HETATM   17  O   UNL     1      -1.383   3.360  -3.328  1.00  0.00    -0.648 OA
+HETATM   18  O   UNL     1       0.357   2.930  -2.211  1.00  0.00    -0.648 OA
+ENDBRANCH   5  16
+TORSDOF 5

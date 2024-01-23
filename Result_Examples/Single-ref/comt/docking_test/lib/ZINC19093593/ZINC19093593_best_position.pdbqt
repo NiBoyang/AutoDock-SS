@@ -1,0 +1,42 @@
+MODEL        93
+USER    Run = 93
+USER
+USER    Estimated Free Energy of Binding    = -37.02 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER
+USER    (1) Final Intermolecular Energy     = -37.61 kcal/mol
+USER        vdW + Hbond + desolv Energy     = -11.04 kcal/mol
+USER        Electrostatic Energy            = -26.57 kcal/mol
+USER        Moving Ligand-Fixed Receptor    = -37.61 kcal/mol
+USER        Moving Ligand-Moving Receptor   =  +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =  -0.03 kcal/mol
+USER    (3) Torsional Free Energy           =  +0.60 kcal/mol
+USER    (4) Unbound System's Energy         =  -0.03 kcal/mol
+USER
+USER
+REMARK  2 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_4 
+REMARK    2  A    between atoms: C_6  and  C_10 
+USER                              x       y       z     vdW  Elec       q    Type
+USER                           _______ _______ _______ _____ _____    ______ ____
+ROOT
+HETATM    1  C   UNL     1      -4.132 -11.778 -18.796 +0.00 +0.37    +0.125 C 
+HETATM    2  C   UNL     1      -3.620 -12.583 -17.598 +0.00 +0.12    +0.047 C 
+HETATM    3  C   UNL     1      -2.448 -13.461 -18.047 +0.00 +0.34    +0.091 C 
+HETATM    4  C   UNL     1      -1.360 -12.573 -18.658 +0.00 +0.14    +0.041 C 
+HETATM    5  C   UNL     1      -1.961 -11.766 -19.813 +0.00 +0.67    +0.169 C 
+HETATM    6  O   UNL     1      -3.064 -10.996 -19.333 -0.94 -1.87    -0.385 OA
+ENDROOT
+BRANCH   1   7
+HETATM    7  C   UNL     1      -5.263 -10.853 -18.342 +0.00 +0.02    +0.006 C 
+HETATM    8  C   UNL     1      -6.593 -11.360 -18.904 +0.00 +0.04    +0.012 C 
+HETATM    9  C   UNL     1      -5.329 -10.839 -16.813 +0.00 +0.04    +0.012 C 
+ENDBRANCH   1   7
+BRANCH   3  10
+HETATM   10  C   UNL     1      -2.927 -14.452 -19.076 +0.00 +1.32    +0.177 C 
+HETATM   11  O   UNL     1      -2.949 -14.147 -20.245 -4.86-13.00    -0.648 OA
+HETATM   12  O   UNL     1      -3.330 -15.674 -18.695 -5.24-14.75    -0.648 OA
+ENDBRANCH   3  10
+TORSDOF 2
+TER
+ENDMDL
