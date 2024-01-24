@@ -39,10 +39,10 @@ python adss_main.py
 ```
 
 ## Components
-- [`adss_main.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/adss_main.py): Main script to run the virtual screening process.
+- [`adss_main.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/adss_main.py): Main script to run the virtual screening process. 
 - [`env.yaml`](https://github.com/NiBoyang/AutoDock-SS/blob/master/env.yaml): Conda environment file with necessary dependencies.
-- [`ligandprep.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/ligandprep.py): Script for ligand preparation.
-- [`roc_auc.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/roc_auc.py): Script for evaluating the performance of the screening.
+- [`ligandprep.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/ligandprep.py): Script for ligand preparation. Called in the main file.
+- [`roc_auc.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/roc_auc.py): Script for evaluating the performance of the screening. Called in the main file.
 - Utility scripts: `geometry_utils.py`, `grid_map_utils.py`, `file_utils.py` for various computational tasks.
 - [`DA.ipynb`](https://github.com/NiBoyang/AutoDock-SS/blob/master/DA.ipynb): A Jupyter notebook for data analysis.
 
