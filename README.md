@@ -45,6 +45,7 @@ python adss_main.py
 - [`roc_auc.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/roc_auc.py): Script for evaluating the performance of the screening. Called in the main file.
 - Utility scripts: `geometry_utils.py`, `grid_map_utils.py`, `file_utils.py` for various computational tasks.
 - [`DA.ipynb`](https://github.com/NiBoyang/AutoDock-SS/blob/master/utils/DA.ipynb): A Jupyter notebook for data analysis.
+- [`cal_score.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/utils/cal_score.py): Script for normalizing the scores if they were not correctly calculated by AutoDock-SS. You need to name your reference ligand(s) end with the suffix '_lig'. For example, if a reference ligand is named 'abc', then rename it as 'abc_lig' and put it in your whole library. After running the main file, this file could be used to re-calculate the normalized scores if needed.
 
 ## Example Results
 The `Result_Examples` directory contains example outputs from the AutoDock-SS algorithm, showcasing its capabilities.
