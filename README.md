@@ -44,7 +44,7 @@ python adss_main.py
 - [`ligandprep.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/ligandprep.py): Script for ligand preparation. Called in the main file.
 - [`roc_auc.py`](https://github.com/NiBoyang/AutoDock-SS/blob/master/roc_auc.py): Script for evaluating the performance of the screening. Called in the main file.
 - Utility scripts: `geometry_utils.py`, `grid_map_utils.py`, `file_utils.py` for various computational tasks.
-- [`DA.ipynb`](https://github.com/NiBoyang/AutoDock-SS/blob/master/DA.ipynb): A Jupyter notebook for data analysis.
+- [`DA.ipynb`](https://github.com/NiBoyang/AutoDock-SS/blob/master/util/DA.ipynb): A Jupyter notebook for data analysis.
 
 ## Example Results
 The `Result_Examples` directory contains example outputs from the AutoDock-SS algorithm, showcasing its capabilities.
