@@ -21,7 +21,7 @@ lib_path = f'/root/autodl-tmp/cache4/enamine_2/lib/' # directory of your VS libr
 lig_path = f'/root/autodl-tmp/cache4/enamine_2/lig/' # directory of your reference ligand
 path_of_scripts = "/root/autodl-tmp/adss-scripts/" # directory of Autodock-SS scripts
 os.chdir(path_of_scripts)
-dlg_original_path = os.getcwd() # directory for storing dlg files
+dlg_original_path = lig_path # directory for storing dlg files
 sdfgz_files = glob.glob(f"{lib_path}*.sdf.gz") # the VS library file should have the extension of .sdf.gz
 supported_atom_types = ["HD", "C", "A", "N", "NA", "OA", "F", "P", "SA", "S",
                         "Cl", "Br", "I", "Mg", "Ca", "Mn", "Fe", "Zn", "d"]
