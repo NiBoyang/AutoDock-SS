@@ -169,7 +169,7 @@ def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoo
             if dist_lis:
                 sorted_dist = sorted(dist_lis, reverse=True)
                 for d in sorted_dist:
-                    energy += 0.225 * (energy - 10) / (d ** 0.5)
+                    energy = 0.225 * (energy - 10) / (d ** 0.5)
 
             gridmap.write(f"{energy:.3f}\n")
 
