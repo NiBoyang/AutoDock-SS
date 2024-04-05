@@ -257,7 +257,7 @@ def main():
 
     for sdfgz_file in sdfgz_files:
     # Convert each .sdf.gz file to .sdf
-        subprocess.check_call(f"obabel -isdf {sdfgz_file} -osdf -O *.sdf --split", shell=True, cwd=lib_path)
+        subprocess.check_call(f"obabel -isdf {sdfgz_file} -osdf -O *.sdf --split -p", shell=True, cwd=lib_path)
         # Try to remove the .sdf.gz file as it was split
         try:
             os.remove(sdfgz_file)
