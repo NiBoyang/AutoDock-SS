@@ -1,7 +1,7 @@
 # AutoDock-SS: Ligand-Based Virtual Screening Algorithm
 
 ## Introduction
-AutoDock-SS is a novel algorithm designed for ligand-based virtual screening. It leverages advanced computational techniques to efficiently screen large compound libraries against a reference ligand, facilitating the discovery of potential drug candidates.
+AutoDock-SS is a novel algorithm designed for ligand-based virtual screening. It leverages advanced computational techniques to efficiently screen large compound libraries against a reference ligand, facilitating the discovery of potential drug candidates. https://doi.org/10.1021/acs.jcim.4c00136
 
 ## Features
 - Efficient screening of large compound libraries
