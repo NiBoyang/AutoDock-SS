@@ -50,8 +50,8 @@ python adss_main.py
 ## Example Results
 The `Result_Examples` directory contains example outputs from the AutoDock-SS algorithm, showcasing its capabilities.
 
-## Contributing
-Contributions to AutoDock-SS are welcome. Please read the contribution guidelines before submitting pull requests.
+## Note
+The `grid_map_utils.py` is the most essential file. You can generate ligand-based grid maps by refering to this file, and feed the map files to AutoDock.
 
 ## License
 AutoDock-SS is released under [MIT License](https://opensource.org/licenses/MIT).
