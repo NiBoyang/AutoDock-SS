@@ -146,13 +146,12 @@ class GridMapInformation:
         return target_ligand, target_charge, target_coords, target_atomtype, target_center, target_size
 
 def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoord, filename, at):
+    at_pdbqt = np.array([ligandcoord[i] for i, atom in enumerate(ligand) if atom[-1] == at])
 
-    at_pdbqt = [coord for i, coord in enumerate(ligandcoord) if ligand[i][-1] == at]
-
-    # generate map file of carbon
+    # Generate map file of the specified atom type
     with open(f"{folder}{filename}.{at}.map", "w") as gridmap:
 
-        # write the document information into each map file
+        # Write the document information into each map file
         gridmap.write("GRID_PARAMETER_FILE " + folder + "\ligand.gpf\n")
         gridmap.write(f"GRID_DATA_FILE {filename}.maps.fld\n")
         gridmap.write(f"MACROMOLECULE {filename}.pdbqt\n")
@@ -160,18 +159,25 @@ def affinity_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoo
         gridmap.write("NELEMENTS " + str(npts[0]) + " " + str(npts[1]) + " " + str(npts[2]) + "\n")
         gridmap.write("CENTER " + str(gridcenter[0]) + " " + str(gridcenter[1]) + " " + str(gridcenter[2]) + "\n")
 
-        # if the carbon atom is within 5 angstrom of a grid point
-        # energy will be counted into that grid point based on the distance
+        # Vectorized distance calculation and energy computation
+        energy_values = []
+        threshold = 1 * 1.54
         for grid in gridcoord:
-            energy = 0
-            dist_lis = [np.linalg.norm(np.array(grid) - np.array(at_coord)) for at_coord in at_pdbqt if np.linalg.norm(np.array(grid) - np.array(at_coord)) <= 1 * 1.54]
+            grid = np.array(grid)
+            distances = np.linalg.norm(at_pdbqt - grid, axis=1)
+            dist_lis = distances[distances <= threshold]
 
-            if dist_lis:
-                sorted_dist = sorted(dist_lis, reverse=True)
+            if len(dist_lis) > 0:
+                sorted_dist = np.sort(dist_lis)[::-1]
+                energy = 0
                 for d in sorted_dist:
-                    energy = 0.225 * (energy - 10) / (d ** 0.5)
+                    energy = 0.225 * (energy - 10) / np.sqrt(d)
+                energy_values.append(energy)
+            else:
+                energy_values.append(0)
 
-            gridmap.write(f"{energy:.3f}\n")
+        # Write energy values to the file
+        gridmap.write("\n".join(f"{energy:.3f}" for energy in energy_values))
 
 def general_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoord, filename, at):
     with open(f"{folder}{filename}.{at}.map", "w") as gridmap:
@@ -187,6 +193,7 @@ def general_map(ligand, folder, spacing, npts, gridcenter, gridcoord, ligandcoor
 
 def elec_map(folder, spacing, npts, gridcenter, gridmap_coords, ligand_coords, atomic_partial_charge, filename):
     with open(f"{folder}{filename}.e.map", "w") as e_gridmap:
+        # Write the header information
         e_gridmap.write("GRID_PARAMETER_FILE " + folder + "\ligand.gpf\n")
         e_gridmap.write(f"GRID_DATA_FILE {filename}.maps.fld\n")
         e_gridmap.write(f"MACROMOLECULE {filename}.pdbqt\n")
@@ -194,12 +201,21 @@ def elec_map(folder, spacing, npts, gridcenter, gridmap_coords, ligand_coords, a
         e_gridmap.write("NELEMENTS " + str(npts[0]) + " " + str(npts[1]) + " " + str(npts[2]) + "\n")
         e_gridmap.write("CENTER " + str(gridcenter[0]) + " " + str(gridcenter[1]) + " " + str(gridcenter[2]) + "\n")
 
+        # Convert inputs to NumPy arrays
         gridmap_coords_array = np.array(gridmap_coords)
         ligand_coords_array = np.array(ligand_coords)
         atomic_partial_charge_array = np.array(atomic_partial_charge)
 
-        for i in gridmap_coords_array:
-            r = np.linalg.norm(i - ligand_coords_array, axis=1)
-            loop_potential = atomic_partial_charge_array / (-0.1465 * r)
-            potential = loop_potential.sum()
-            e_gridmap.write(f"{potential:.3f}\n")
+        # Initialize an array to store potentials
+        potentials = []
+
+        # Vectorized calculation of potentials
+        for grid_point in gridmap_coords_array:
+            r = np.linalg.norm(grid_point - ligand_coords_array, axis=1)
+            with np.errstate(divide='ignore'):  # Ignore division by zero warnings
+                loop_potential = atomic_partial_charge_array / (-0.1465 * r)
+            potential = np.nansum(loop_potential)  # Sum, ignoring NaNs from division by zero
+            potentials.append(f"{potential:.3f}")
+
+        # Write all potentials at once
+        e_gridmap.write("\n".join(potentials))
